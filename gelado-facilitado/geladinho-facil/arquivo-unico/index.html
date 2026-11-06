@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geladinho Fácil | Cardápio</title>
+  <meta name="description" content="Cardápio de geladinhos com pedido pelo WhatsApp e painel de gestão da produtora.">
+  <meta name="theme-color" content="#D6336C">
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAD0ElEQVR4Xu3dvW0VQRhAUYwQvRA7pQcaoQIKoB96ICWFXkhAIFlCCJndtzP78+45sT0za393/PwC++Hr4/sfLyDqZfS54TcBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgLRX6aff4M3njxs+e7xvbz+MXzTgwb9I2uYMIRj+2wlggKMiMPjbCWCgPUMw/GMIYLDZERj8sQQwyYwQDP943gYlzU+AwWbc/H/zk2AcAQyyx+ALYTwvgQY4Yvh/OWrfeyKAjY4ewqP3vzoBbHCW4TvLOa5IADc629Cd7TxXIYAbnHXYznquMxPASmcfsrOf72wEsMJVhusq5zwDAZAmgIWudqte7bxHEQBpAljgqrfpVc+9JwGQJoD/uPotevXzz+avQuzo+6fHRbu9fvdl0cexnQB2sHTwn/z58WKYSwATrR38f3laQwhz+B3gGVteP48Y/j9tWW/Lc9w7AUywZVifM2vdMgEMNntIZ69fI4CB9hrOvfYpEMAgew/l3vvdKwGQJoABjrqNj9r3ngiANAFsdPQtfPT+VycA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gSw0et3XzausM3R+1+dAJ7x7e2Hq39/f7uX55hBAKQJYICjXoYcte89EQBpAviPpa+f976Nl+639PxVAhho6VButdc+BQJYYM0tOns416y/5txVAphgzZCuMWvdMgEstPY2HT2sa9dbe96qV9UH38PT0H7/9HjzdmsHn3Uevj6+/7HuU9refP548xdgaQhbh97tv5wAbrAlgtkM/zp+B7jBWYfsrOc6MwHc6GzDdrbzXIUANjjL0J3lHFckgI2OHr6j9786AQxw1BAete898S7QYHu8Q2TwxxHAJDNCMPjjCWCyESEY/HkEsLMlQRj4/QiANO8CkSYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI+wlFpMnyfwkliwAAAABJRU5ErkJggg==">
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAD0ElEQVR4Xu3dvW0VQRhAUYwQvRA7pQcaoQIKoB96ICWFXkhAIFlCCJndtzP78+45sT0za393/PwC++Hr4/sfLyDqZfS54TcBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgLRX6aff4M3njxs+e7xvbz+MXzTgwb9I2uYMIRj+2wlggKMiMPjbCWCgPUMw/GMIYLDZERj8sQQwyYwQDP943gYlzU+AwWbc/H/zk2AcAQyyx+ALYTwvgQY4Yvh/OWrfeyKAjY4ewqP3vzoBbHCW4TvLOa5IADc629Cd7TxXIYAbnHXYznquMxPASmcfsrOf72wEsMJVhusq5zwDAZAmgIWudqte7bxHEQBpAljgqrfpVc+9JwGQJoD/uPotevXzz+avQuzo+6fHRbu9fvdl0cexnQB2sHTwn/z58WKYSwATrR38f3laQwhz+B3gGVteP48Y/j9tWW/Lc9w7AUywZVifM2vdMgEMNntIZ69fI4CB9hrOvfYpEMAgew/l3vvdKwGQJoABjrqNj9r3ngiANAFsdPQtfPT+VycA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gSw0et3XzausM3R+1+dAJ7x7e2Hq39/f7uX55hBAKQJYICjXoYcte89EQBpAviPpa+f976Nl+639PxVAhho6VButdc+BQJYYM0tOns416y/5txVAphgzZCuMWvdMgEstPY2HT2sa9dbe96qV9UH38PT0H7/9HjzdmsHn3Uevj6+/7HuU9refP548xdgaQhbh97tv5wAbrAlgtkM/zp+B7jBWYfsrOc6MwHc6GzDdrbzXIUANjjL0J3lHFckgI2OHr6j9786AQxw1BAete898S7QYHu8Q2TwxxHAJDNCMPjjCWCyESEY/HkEsLMlQRj4/QiANO8CkSYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI+wlFpMnyfwkliwAAAABJRU5ErkJggg==">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+/* ==========================================================
+   Geladinho Fácil - folha de estilo (mobile first)
+   ========================================================== */
+
+:root {
+  --cor-primaria: #D6336C;
+  --cor-primaria-escura: #A61E4D;
+  --cor-primaria-clara: #FCE4EC;
+  --cor-fundo: #FFF7F2;
+  --cor-superficie: #FFFFFF;
+  --cor-texto: #2B1B3D;
+  --cor-suave: #6E6178;
+  --cor-borda: #EADFD8;
+  --cor-estrela: #F2A20C;
+  --cor-sucesso: #2B8A3E;
+  --cor-perigo: #C92A2A;
+  --cor-alerta: #B35C00;
+  --cor-whats: #1C9E50;
+  --cor-whats-escura: #147A3D;
+  --raio: 14px;
+  --sombra: 0 2px 12px rgba(43, 27, 61, .07);
+  --fonte: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+}
+
+h1, h2, h3 { line-height: 1.25; margin: 0 0 .5rem; }
+h2 { font-size: 1.15rem; }
+p { margin: 0 0 .5rem; }
+img, svg { display: block; }
+a { color: var(--cor-primaria-escura); }
+
+:focus-visible { outline: 3px solid var(--cor-primaria); outline-offset: 2px; }
+
+.pular {
+  position: absolute; left: -999px; top: 8px; z-index: 100;
+  background: var(--cor-texto); color: #fff; padding: 8px 12px; border-radius: 8px;
+}
+.pular:focus { left: 8px; }
+
+.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+.suave { color: var(--cor-suave); font-size: .92rem; }
+.positivo { color: var(--cor-sucesso); }
+.negativo { color: var(--cor-perigo); }
+.alerta-texto { color: var(--cor-alerta); font-size: .92rem; margin-top: 8px; }
+.vazio { color: var(--cor-suave); text-align: center; padding: 24px 8px; }
+.link { font-weight: 700; font-size: .92rem; }
+
+/* ---------- Botões ---------- */
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  min-height: 44px; padding: 10px 18px;
+  border: 2px solid transparent; border-radius: 999px;
+  font: inherit; font-weight: 700; text-decoration: none; cursor: pointer;
+  transition: background .15s, transform .1s;
+}
+.btn:active { transform: scale(.98); }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn small { font-weight: 600; opacity: .8; }
+.btn-primario { background: var(--cor-primaria); color: #fff; }
+.btn-primario:hover:not(:disabled) { background: var(--cor-primaria-escura); }
+.btn-secundario { background: var(--cor-superficie); color: var(--cor-primaria-escura); border-color: var(--cor-primaria); }
+.btn-secundario:hover:not(:disabled) { background: var(--cor-primaria-clara); }
+.btn-whats { background: var(--cor-whats); color: #fff; }
+.btn-whats:hover:not(:disabled) { background: var(--cor-whats-escura); }
+.btn-perigo { background: var(--cor-superficie); color: var(--cor-perigo); border-color: var(--cor-perigo); }
+.btn-texto { background: none; color: var(--cor-suave); padding: 6px 10px; text-decoration: underline; }
+.btn-pequeno { min-height: 36px; padding: 6px 14px; font-size: .9rem; }
+
+/* ---------- Cartões e formulários ---------- */
+
+.cartao {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.form-grade { display: grid; gap: 12px; grid-template-columns: 1fr; }
+.largura-total { grid-column: 1 / -1; }
+
+label { display: flex; flex-direction: column; gap: 4px; font-weight: 700; font-size: .92rem; }
+label.inline { flex-direction: row; align-items: center; gap: 8px; }
+
+input, select, textarea {
+  font: inherit; font-weight: 400; color: var(--cor-texto);
+  min-height: 44px; padding: 8px 12px;
+  border: 1.5px solid var(--cor-borda); border-radius: 10px; background: #fff;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--cor-primaria); outline: none; box-shadow: 0 0 0 3px var(--cor-primaria-clara); }
+
+.erro-form { color: var(--cor-perigo); font-weight: 700; min-height: 1px; margin: 0; }
+.erro-form:empty { display: none; }
+.total-previo { font-weight: 800; margin: 0; }
+
+.badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: .8rem; font-weight: 800; white-space: nowrap;
+}
+.badge-novo { background: #E7F0FF; color: #1D4ED8; }
+.badge-producao { background: #FFF3D6; color: #8A5300; }
+.badge-entregue { background: #E3F6E8; color: var(--cor-sucesso); }
+.badge-cancelado { background: #F1ECEF; color: var(--cor-suave); }
+.badge-brinde { background: #FFF3D6; color: #8A5300; }
+
+.novo-pedido summary { cursor: pointer; list-style: none; }
+.novo-pedido summary::-webkit-details-marker { display: none; }
+.novo-pedido summary h2 { margin: 0; color: var(--cor-primaria-escura); }
+.novo-pedido[open] summary { margin-bottom: 12px; }
+
+.confirmacao-fundo {
+  position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 16px;
+  background: rgba(43, 27, 61, .45);
+}
+.confirmacao {
+  width: 100%; max-width: 380px; background: var(--cor-superficie); border-radius: var(--raio);
+  padding: 20px; box-shadow: 0 12px 40px rgba(0,0,0,.25); font-weight: 700;
+}
+.confirmacao .pedido-acoes { justify-content: flex-end; }
+
+/* ---------- Tabelas ---------- */
+
+.tabela-rolagem { overflow-x: auto; margin: 0 -4px; }
+.tabela { width: 100%; border-collapse: collapse; font-size: .94rem; }
+.tabela th, .tabela td { padding: 10px 8px; text-align: left; border-bottom: 1px solid var(--cor-borda); white-space: nowrap; }
+.tabela th { font-size: .8rem; text-transform: uppercase; letter-spacing: .03em; color: var(--cor-suave); }
+.tabela-dre td:nth-child(2), .tabela-dre th:nth-child(2), .tabela-dre td:nth-child(3), .tabela-dre th:nth-child(3) { text-align: right; }
+.tabela-dre .subtotal td { font-weight: 800; background: #FBF5F2; }
+.tabela-dre .detalhe td:first-child { padding-left: 24px; color: var(--cor-suave); }
+.tabela-dre .total td { font-weight: 800; font-size: 1.05rem; border-top: 2px solid var(--cor-texto); }
+.input-tabela { width: 90px; min-height: 36px; padding: 4px 8px; }
+.ponto { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; }
+
+/* ---------- Indicadores ---------- */
+
+.kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 16px; }
+.kpi {
+  display: flex; flex-direction: column; gap: 2px;
+  background: var(--cor-superficie); border: 1px solid var(--cor-borda); border-radius: var(--raio);
+  padding: 14px; box-shadow: var(--sombra); text-decoration: none; color: inherit;
+}
+a.kpi:hover { border-color: var(--cor-primaria); }
+.kpi span { font-size: .85rem; color: var(--cor-suave); font-weight: 700; }
+.kpi strong { font-size: 1.35rem; font-weight: 800; }
+.kpi .kpi-texto { font-size: 1rem; }
+
+.barras { display: grid; gap: 10px; margin-bottom: 12px; }
+.barra-linha { display: grid; grid-template-columns: 84px 1fr 36px; align-items: center; gap: 8px; font-size: .92rem; }
+.barra-linha strong { text-align: right; }
+.barra-trilho { height: 14px; background: #F4ECE8; border-radius: 999px; overflow: hidden; }
+.barra-valor { height: 100%; border-radius: 999px; min-width: 4px; }
+
+/* ---------- Listas ---------- */
+
+.lista-simples { list-style: none; margin: 0 0 8px; padding: 0; }
+.lista-simples li {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 8px 0; border-bottom: 1px solid var(--cor-borda);
+}
+.lista-simples li > span:nth-child(2) { flex: 1; }
+
+.lista-compras { list-style: none; padding: 0; margin: 0 0 12px; }
+.lista-compras li { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--cor-borda); }
+.lista-compras label { flex-direction: row; align-items: center; gap: 10px; font-weight: 400; font-size: 1rem; }
+.lista-compras input { min-height: 22px; width: 22px; height: 22px; accent-color: var(--cor-primaria); }
+.lista-compras input:checked + span { text-decoration: line-through; color: var(--cor-suave); }
+
+.abas { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 8px; }
+.aba {
+  border: 1.5px solid var(--cor-borda); background: var(--cor-superficie); color: var(--cor-texto);
+  border-radius: 999px; padding: 6px 14px; font: inherit; font-weight: 700; cursor: pointer; white-space: nowrap;
+}
+.aba span { color: var(--cor-suave); font-weight: 600; margin-left: 4px; }
+.aba.ativa { background: var(--cor-texto); color: #fff; border-color: var(--cor-texto); }
+.aba.ativa span { color: #fff; opacity: .8; }
+
+.lista-pedidos { display: grid; gap: 10px; }
+.pedido {
+  display: flex; gap: 12px; background: var(--cor-superficie); border: 1px solid var(--cor-borda);
+  border-radius: var(--raio); padding: 12px; box-shadow: var(--sombra);
+}
+.pedido-info { flex: 1; min-width: 0; }
+.pedido-info p { margin: 2px 0; }
+.pedido-linha { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.pedido-acoes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+
+.estrelas { display: inline-flex; gap: 2px; font-size: 1.4rem; line-height: 1; margin: 6px 0; }
+.estrelas.grandes { font-size: 2rem; }
+.estrela { color: #E6DCD6; }
+.estrela.cheia { color: var(--cor-estrela); }
+
+.grade-cartoes { display: grid; gap: 12px; }
+.cartao-fidelidade { margin-bottom: 0; }
+.cartao-fidelidade.tem-brinde { border-color: var(--cor-estrela); }
+.busca { margin-bottom: 12px; }
+
+.grade-botoes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.grade-botoes label.btn { flex-direction: row; font-size: 1rem; }
+
+.barra-acoes { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 16px; }
+
+.toast {
+  position: fixed; left: 50%; bottom: 88px; transform: translate(-50%, 20px);
+  background: var(--cor-texto); color: #fff; padding: 12px 18px; border-radius: 12px;
+  font-weight: 700; box-shadow: 0 6px 24px rgba(0,0,0,.2);
+  opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; z-index: 50;
+  max-width: calc(100% - 32px);
+}
+.toast.visivel { opacity: 1; transform: translate(-50%, 0); }
+.toast.erro { background: var(--cor-perigo); }
+.toast.alerta { background: #5B4A66; }
+
+/* ==========================================================
+   VITRINE (cardápio do cliente)
+   ========================================================== */
+
+.vitrine { padding-bottom: 110px; }
+
+.topo { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.95); backdrop-filter: blur(6px); border-bottom: 1px solid var(--cor-borda); }
+.topo-conteudo { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 10px; padding-bottom: 10px; }
+.marca { display: flex; align-items: center; gap: 10px; }
+.marca img { border-radius: 10px; }
+.marca strong { display: block; font-size: 1.1rem; font-weight: 800; }
+.marca small { display: block; color: var(--cor-suave); font-size: .82rem; }
+
+.hero {
+  margin: 16px 0 24px; padding: 24px 20px; border-radius: 20px; color: #fff;
+  background: linear-gradient(135deg, var(--cor-primaria) 0%, #E8590C 100%);
+}
+.hero h1 { font-size: 1.6rem; font-weight: 800; }
+.hero p { opacity: .95; }
+.aviso-exemplo { display: inline-block; background: rgba(255,255,255,.2); padding: 4px 12px; border-radius: 999px; font-size: .85rem; font-weight: 700; margin-top: 6px; }
+
+.titulo-secao { font-size: 1.3rem; margin-bottom: 12px; }
+
+.grade-sabores { display: grid; gap: 14px; grid-template-columns: 1fr; margin-bottom: 24px; }
+.card-sabor {
+  display: flex; gap: 14px; align-items: center;
+  background: var(--cor-superficie); border: 2px solid var(--cor-borda); border-radius: 18px;
+  padding: 14px; box-shadow: var(--sombra); transition: border-color .15s;
+}
+.card-sabor.selecionado { border-color: var(--cor-sabor); }
+.card-sabor-imagem {
+  flex: none; width: 96px; height: 112px; display: grid; place-items: center; border-radius: 14px;
+  background: color-mix(in srgb, var(--cor-sabor) 14%, white);
+}
+.card-sabor-corpo { flex: 1; min-width: 0; }
+.card-sabor h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 2px; }
+.card-sabor-rodape { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.preco { font-size: 1.2rem; font-weight: 800; }
+
+.stepper { display: inline-flex; align-items: center; border: 2px solid var(--cor-borda); border-radius: 999px; overflow: hidden; }
+.stepper button {
+  width: 44px; height: 40px; border: 0; background: var(--cor-primaria-clara); color: var(--cor-primaria-escura);
+  font-size: 1.4rem; font-weight: 800; cursor: pointer;
+}
+.stepper button:hover { background: #F8C9D9; }
+.stepper output { min-width: 36px; text-align: center; font-weight: 800; font-size: 1.1rem; }
+
+.cartao-fidelidade-info { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; background: #FFF9EC; border-color: #F6DFA6; }
+
+.barra-carrinho {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+  background: var(--cor-superficie); border-top: 1px solid var(--cor-borda);
+  box-shadow: 0 -4px 20px rgba(43,27,61,.08); padding: 12px 0;
+}
+.barra-conteudo { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.barra-conteudo span { display: block; font-size: .85rem; color: var(--cor-suave); font-weight: 700; }
+.barra-conteudo strong { font-size: 1.25rem; font-weight: 800; }
+.barra-carrinho.ativa .btn-whats { animation: pulso 1.8s ease-in-out 1; }
+@keyframes pulso { 50% { transform: scale(1.05); } }
+
+.rodape { color: var(--cor-suave); font-size: .85rem; padding-top: 16px; padding-bottom: 16px; }
+
+/* ==========================================================
+   PAINEL (produtora)
+   ========================================================== */
+
+.painel { padding-bottom: 84px; }
+
+.menu-lateral { display: none; }
+
+.topo-painel {
+  position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 14px 16px; background: rgba(255,247,242,.95); backdrop-filter: blur(6px); border-bottom: 1px solid var(--cor-borda);
+}
+.topo-painel h1 { font-size: 1.35rem; font-weight: 800; margin: 0; }
+.selo-demo { background: #FFF3D6; color: #8A5300; font-size: .78rem; font-weight: 800; padding: 4px 10px; border-radius: 999px; }
+
+#conteudo { padding: 16px; outline: none; max-width: 1100px; }
+
+.menu-inferior {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  background: var(--cor-superficie); border-top: 1px solid var(--cor-borda);
+  padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+}
+.menu-inferior a {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 6px 2px; border-radius: 12px; text-decoration: none;
+  color: var(--cor-suave); font-size: .72rem; font-weight: 700;
+}
+.menu-inferior a.ativo { color: var(--cor-primaria); background: var(--cor-primaria-clara); }
+
+.icone { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+.grade-modulos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.modulo {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 16px;
+  background: var(--cor-superficie); border: 1px solid var(--cor-borda); border-radius: var(--raio);
+  text-decoration: none; color: var(--cor-texto); font-weight: 800; box-shadow: var(--sombra);
+}
+.modulo .icone { color: var(--cor-primaria); width: 28px; height: 28px; }
+
+.duas-colunas { display: grid; gap: 16px; }
+.duas-colunas .cartao { margin-bottom: 0; }
+.boas-vindas { background: var(--cor-primaria-clara); border-color: #F8C9D9; }
+
+/* ==========================================================
+   TELA INICIAL
+   ========================================================== */
+
+.inicio-sistema { display: grid; gap: 28px; padding-top: 32px; padding-bottom: 40px; }
+.inicio-cabecalho { display: flex; align-items: center; gap: 16px; }
+.inicio-cabecalho img { border-radius: 16px; flex: none; }
+.inicio-cabecalho h1 { font-size: 1.9rem; font-weight: 800; margin: 0; }
+.inicio-cabecalho p { color: var(--cor-suave); margin: 4px 0 0; }
+.inicio-portas { display: grid; gap: 14px; }
+.porta {
+  display: grid; gap: 6px; padding: 20px; border-radius: 18px; text-decoration: none; color: #fff;
+  box-shadow: var(--sombra); transition: transform .15s;
+}
+.porta:hover { transform: translateY(-2px); }
+.porta small { text-transform: uppercase; letter-spacing: .06em; font-weight: 800; font-size: .75rem; opacity: .9; }
+.porta strong { font-size: 1.4rem; font-weight: 800; }
+.porta span { opacity: .95; }
+.porta em { font-style: normal; font-weight: 800; margin-top: 6px; }
+.porta-cliente { background: linear-gradient(135deg, var(--cor-primaria) 0%, #E8590C 100%); }
+.porta-produtora { background: var(--cor-texto); }
+.modulo small { color: var(--cor-suave); font-weight: 600; font-size: .85rem; }
+.inicio-dica { background: var(--cor-superficie); border: 1px dashed var(--cor-borda); border-radius: 12px; padding: 12px 14px; }
+@media (prefers-reduced-motion: reduce) { .porta, .btn { transition: none; } .porta:hover { transform: none; } }
+
+/* ---------- Telas maiores ---------- */
+
+@media (min-width: 640px) {
+  .form-grade { grid-template-columns: repeat(2, 1fr); }
+  .grade-sabores { grid-template-columns: repeat(2, 1fr); }
+  .kpis { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+  .grade-cartoes { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .grade-modulos { grid-template-columns: repeat(3, 1fr); }
+  .inicio-portas { grid-template-columns: 1fr 1fr; }
+  .hero h1 { font-size: 2rem; }
+}
+
+@media (min-width: 960px) {
+  .grade-modulos { grid-template-columns: repeat(4, 1fr); }
+  .painel { padding-bottom: 0; }
+  .app { display: grid; grid-template-columns: 250px 1fr; min-height: 100vh; }
+  .menu-lateral {
+    display: flex; flex-direction: column; gap: 20px; position: sticky; top: 0; height: 100vh;
+    padding: 20px 14px; background: var(--cor-texto); color: #fff;
+  }
+  .menu-lateral .marca small { color: rgba(255,255,255,.65); }
+  .menu-lateral ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+  .menu-lateral a {
+    display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 10px;
+    color: rgba(255,255,255,.82); text-decoration: none; font-weight: 700;
+  }
+  .menu-lateral a:hover { background: rgba(255,255,255,.08); color: #fff; }
+  .menu-lateral a.ativo { background: var(--cor-primaria); color: #fff; }
+  .menu-lateral .link-cardapio { border: 1px solid rgba(255,255,255,.25); justify-content: center; }
+  .menu-lateral nav { flex: 1; }
+  .menu-inferior { display: none; }
+  .topo-painel { padding: 18px 28px; }
+  #conteudo { padding: 24px 28px; }
+  .duas-colunas { grid-template-columns: 1fr 1fr; }
+  .form-grade { grid-template-columns: repeat(3, 1fr); }
+  .toast { bottom: 24px; }
+}
+
+</style>
+</head>
+<body class="tela-inicial">
+
+  <!-- =====================================================
+       TELA INICIAL (endereço sem # ou #inicio-sistema)
+       ===================================================== -->
+  <div id="modo-inicio">
+    <main class="container inicio-sistema">
+      <header class="inicio-cabecalho">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAD0ElEQVR4Xu3dvW0VQRhAUYwQvRA7pQcaoQIKoB96ICWFXkhAIFlCCJndtzP78+45sT0za393/PwC++Hr4/sfLyDqZfS54TcBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgLRX6aff4M3njxs+e7xvbz+MXzTgwb9I2uYMIRj+2wlggKMiMPjbCWCgPUMw/GMIYLDZERj8sQQwyYwQDP943gYlzU+AwWbc/H/zk2AcAQyyx+ALYTwvgQY4Yvh/OWrfeyKAjY4ewqP3vzoBbHCW4TvLOa5IADc629Cd7TxXIYAbnHXYznquMxPASmcfsrOf72wEsMJVhusq5zwDAZAmgIWudqte7bxHEQBpAljgqrfpVc+9JwGQJoD/uPotevXzz+avQuzo+6fHRbu9fvdl0cexnQB2sHTwn/z58WKYSwATrR38f3laQwhz+B3gGVteP48Y/j9tWW/Lc9w7AUywZVifM2vdMgEMNntIZ69fI4CB9hrOvfYpEMAgew/l3vvdKwGQJoABjrqNj9r3ngiANAFsdPQtfPT+VycA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gSw0et3XzausM3R+1+dAJ7x7e2Hq39/f7uX55hBAKQJYICjXoYcte89EQBpAviPpa+f976Nl+639PxVAhho6VButdc+BQJYYM0tOns416y/5txVAphgzZCuMWvdMgEstPY2HT2sa9dbe96qV9UH38PT0H7/9HjzdmsHn3Uevj6+/7HuU9refP548xdgaQhbh97tv5wAbrAlgtkM/zp+B7jBWYfsrOc6MwHc6GzDdrbzXIUANjjL0J3lHFckgI2OHr6j9786AQxw1BAete898S7QYHu8Q2TwxxHAJDNCMPjjCWCyESEY/HkEsLMlQRj4/QiANO8CkSYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI+wlFpMnyfwkliwAAAABJRU5ErkJggg==" alt="" width="64" height="64">
+        <div>
+          <h1 data-nome-negocio>Geladinho Fácil</h1>
+          <p>Cardápio com pedido pelo WhatsApp e gestão completa da produção.</p>
+        </div>
+      </header>
+
+      <section class="inicio-portas" aria-label="Escolha a área">
+        <a class="porta porta-cliente" href="#cardapio">
+          <small>Para o cliente</small>
+          <strong>Cardápio</strong>
+          <span>Escolher sabores e pedir pelo WhatsApp.</span>
+          <em>Abrir cardápio →</em>
+        </a>
+        <a class="porta porta-produtora" href="#painel">
+          <small>Para a produtora</small>
+          <strong>Painel de gestão</strong>
+          <span>Pedidos, clientes, produção, preços e resultado do mês.</span>
+          <em>Abrir painel →</em>
+        </a>
+      </section>
+
+      <section>
+        <h2 class="titulo-secao">Módulos do painel</h2>
+        <div class="grade-modulos" id="atalhos-modulos"></div>
+      </section>
+
+      <p class="suave inicio-dica">Para o QR Code e para divulgar aos clientes, use o link do cardápio: o endereço do site com <strong>#cardapio</strong> no final.</p>
+    </main>
+  </div>
+
+  <!-- =====================================================
+       CARDÁPIO DO CLIENTE (endereço sem # ou #cardapio)
+       ===================================================== -->
+  <div id="modo-vitrine" hidden>
+    <a class="pular" href="#catalogo">Pular para o cardápio</a>
+
+    <header class="topo">
+      <div class="container topo-conteudo">
+        <div class="marca">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAD0ElEQVR4Xu3dvW0VQRhAUYwQvRA7pQcaoQIKoB96ICWFXkhAIFlCCJndtzP78+45sT0za393/PwC++Hr4/sfLyDqZfS54TcBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgLRX6aff4M3njxs+e7xvbz+MXzTgwb9I2uYMIRj+2wlggKMiMPjbCWCgPUMw/GMIYLDZERj8sQQwyYwQDP943gYlzU+AwWbc/H/zk2AcAQyyx+ALYTwvgQY4Yvh/OWrfeyKAjY4ewqP3vzoBbHCW4TvLOa5IADc629Cd7TxXIYAbnHXYznquMxPASmcfsrOf72wEsMJVhusq5zwDAZAmgIWudqte7bxHEQBpAljgqrfpVc+9JwGQJoD/uPotevXzz+avQuzo+6fHRbu9fvdl0cexnQB2sHTwn/z58WKYSwATrR38f3laQwhz+B3gGVteP48Y/j9tWW/Lc9w7AUywZVifM2vdMgEMNntIZ69fI4CB9hrOvfYpEMAgew/l3vvdKwGQJoABjrqNj9r3ngiANAFsdPQtfPT+VycA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gSw0et3XzausM3R+1+dAJ7x7e2Hq39/f7uX55hBAKQJYICjXoYcte89EQBpAviPpa+f976Nl+639PxVAhho6VButdc+BQJYYM0tOns416y/5txVAphgzZCuMWvdMgEstPY2HT2sa9dbe96qV9UH38PT0H7/9HjzdmsHn3Uevj6+/7HuU9refP548xdgaQhbh97tv5wAbrAlgtkM/zp+B7jBWYfsrOc6MwHc6GzDdrbzXIUANjjL0J3lHFckgI2OHr6j9786AQxw1BAete898S7QYHu8Q2TwxxHAJDNCMPjjCWCyESEY/HkEsLMlQRj4/QiANO8CkSYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI+wlFpMnyfwkliwAAAABJRU5ErkJggg==" alt="" width="40" height="40">
+          <div>
+            <strong data-nome-negocio>Geladinho Fácil</strong>
+            <small id="slogan">Geladinho cremoso feito em casa</small>
+          </div>
+        </div>
+        <a class="btn btn-secundario btn-pequeno" href="#seu-pedido">Meu pedido</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Escolha seus sabores e peça pelo WhatsApp</h1>
+        <p>Monte o pedido aqui e toque em "Pedir pelo WhatsApp". A mensagem já vai pronta para a produtora.</p>
+        <p class="aviso-exemplo" id="aviso-exemplo" hidden>Preços de exemplo, ainda não confirmados pela produtora.</p>
+      </section>
+
+      <h2 class="titulo-secao">Cardápio</h2>
+      <section id="catalogo" class="grade-sabores" aria-live="polite">
+        <p class="vazio">Carregando cardápio...</p>
+      </section>
+
+      <section class="cartao cartao-fidelidade-info">
+        <div class="estrelas grandes" aria-hidden="true"><span class="estrela cheia">★</span><span class="estrela cheia">★</span><span class="estrela cheia">★</span><span class="estrela">★</span><span class="estrela">★</span></div>
+        <div>
+          <h2>Cartão fidelidade</h2>
+          <p id="regra-fidelidade">Cada geladinho vale 1 estrela.</p>
+        </div>
+      </section>
+
+      <section class="cartao" id="seu-pedido">
+        <h2>Seu pedido</h2>
+        <div id="resumo"></div>
+        <div class="form-grade">
+          <label>Seu nome
+            <input id="nome" autocomplete="name" required placeholder="Como devemos te chamar?">
+          </label>
+          <label>Como prefere receber?
+            <select id="entrega">
+              <option>Retirada</option>
+              <option>Entrega</option>
+            </select>
+          </label>
+          <label>Para quando? (opcional)
+            <input id="data" type="date">
+          </label>
+          <label>Observação (opcional)
+            <input id="obs" placeholder="Ex.: entregar na escola">
+          </label>
+        </div>
+        <p class="erro-form" id="aviso" role="alert"></p>
+      </section>
+    </main>
+
+    <div class="barra-carrinho" id="barra">
+      <div class="container barra-conteudo">
+        <div>
+          <span id="qtd-total">0 geladinhos</span>
+          <strong id="valor-total">R$ 0,00</strong>
+        </div>
+        <button id="btn-pedir" class="btn btn-whats" disabled>Pedir pelo WhatsApp</button>
+      </div>
+    </div>
+
+    <footer class="rodape container">
+      <p><span data-nome-negocio>Geladinho Fácil</span> · Sistema desenvolvido pela turma do Técnico em Informática para Internet, Senac MT.</p>
+      <p><a href="#painel">Área da produtora</a> · <a href="#inicio-sistema">Tela inicial</a></p>
+    </footer>
+  </div>
+
+  <!-- =====================================================
+       PAINEL DA PRODUTORA (#painel e #painel-<módulo>)
+       ===================================================== -->
+  <div id="modo-painel" hidden>
+    <div class="app">
+      <aside class="menu-lateral" aria-label="Menu principal">
+        <div class="marca">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAD0ElEQVR4Xu3dvW0VQRhAUYwQvRA7pQcaoQIKoB96ICWFXkhAIFlCCJndtzP78+45sT0za393/PwC++Hr4/sfLyDqZfS54TcBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgLRX6aff4M3njxs+e7xvbz+MXzTgwb9I2uYMIRj+2wlggKMiMPjbCWCgPUMw/GMIYLDZERj8sQQwyYwQDP943gYlzU+AwWbc/H/zk2AcAQyyx+ALYTwvgQY4Yvh/OWrfeyKAjY4ewqP3vzoBbHCW4TvLOa5IADc629Cd7TxXIYAbnHXYznquMxPASmcfsrOf72wEsMJVhusq5zwDAZAmgIWudqte7bxHEQBpAljgqrfpVc+9JwGQJoD/uPotevXzz+avQuzo+6fHRbu9fvdl0cexnQB2sHTwn/z58WKYSwATrR38f3laQwhz+B3gGVteP48Y/j9tWW/Lc9w7AUywZVifM2vdMgEMNntIZ69fI4CB9hrOvfYpEMAgew/l3vvdKwGQJoABjrqNj9r3ngiANAFsdPQtfPT+VycA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gSw0et3XzausM3R+1+dAJ7x7e2Hq39/f7uX55hBAKQJYICjXoYcte89EQBpAviPpa+f976Nl+639PxVAhho6VButdc+BQJYYM0tOns416y/5txVAphgzZCuMWvdMgEstPY2HT2sa9dbe96qV9UH38PT0H7/9HjzdmsHn3Uevj6+/7HuU9refP548xdgaQhbh97tv5wAbrAlgtkM/zp+B7jBWYfsrOc6MwHc6GzDdrbzXIUANjjL0J3lHFckgI2OHr6j9786AQxw1BAete898S7QYHu8Q2TwxxHAJDNCMPjjCWCyESEY/HkEsLMlQRj4/QiANO8CkSYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI+wlFpMnyfwkliwAAAABJRU5ErkJggg==" alt="" width="36" height="36">
+          <div>
+            <strong id="nome-negocio-menu">Geladinho Fácil</strong>
+            <small>Painel da produtora</small>
+          </div>
+        </div>
+        <nav>
+          <ul id="menu-lateral-lista"></ul>
+        </nav>
+        <a class="link-cardapio" href="#inicio-sistema">Tela inicial</a>
+        <a class="link-cardapio" href="#cardapio">Ver cardápio do cliente</a>
+      </aside>
+
+      <div class="principal">
+        <header class="topo-painel">
+          <h1 id="titulo-tela">Início</h1>
+          <span class="selo-demo" id="selo-demo" hidden>Dados de demonstração</span>
+        </header>
+        <main id="conteudo" tabindex="-1">
+          <p class="vazio">Carregando...</p>
+        </main>
+      </div>
+    </div>
+
+    <nav class="menu-inferior" id="menu-inferior" aria-label="Menu"></nav>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>window.CATALOGO_EMBUTIDO = {"produtora": {"nome": "Geladinho Fácil", "cidade": "Itaúba - MT", "slogan": "Geladinho cremoso feito em casa", "whatsapp": ""}, "fidelidade": {"estrelasParaBrinde": 5, "brinde": "1 geladinho grátis"}, "precosDeExemplo": true, "sabores": [{"id": "pudim", "nome": "Pudim", "descricao": "Cremoso, feito com ovos e leite condensado.", "preco": 3.0, "cor": "#E9B949", "rendimento": 22, "ingredientes": [{"item": "Ovos", "qtd": 4}, {"item": "Leite condensado", "qtd": 4}, {"item": "Leite (medida da lata)", "qtd": 4}]}, {"id": "morango", "nome": "Morango", "descricao": "Suco de morango com leite condensado e creme de leite.", "preco": 3.0, "cor": "#E84A6F", "rendimento": 12, "ingredientes": [{"item": "Leite condensado", "qtd": 1}, {"item": "Creme de leite", "qtd": 1}, {"item": "Suco de morango (pacote)", "qtd": 3}]}, {"id": "maracuja", "nome": "Maracujá", "descricao": "Suco de maracujá com leite condensado e creme de leite.", "preco": 3.0, "cor": "#F2A20C", "rendimento": 12, "ingredientes": [{"item": "Leite condensado", "qtd": 1}, {"item": "Creme de leite", "qtd": 1}, {"item": "Suco de maracujá (pacote)", "qtd": 3}]}, {"id": "chocolate", "nome": "Chocolate", "descricao": "Achocolatado com leite condensado e creme de leite.", "preco": 3.0, "cor": "#7B4B36", "rendimento": 11, "ingredientes": [{"item": "Leite condensado", "qtd": 1}, {"item": "Creme de leite", "qtd": 1}, {"item": "Achocolatado (colher)", "qtd": 7}]}]};</script>
+  <script>
+/* ==========================================================
+   util.js - funções de apoio usadas em todo o sistema
+   ========================================================== */
+
+// Formata número como dinheiro: 3 -> "R$ 3,00"
+function moeda(valor) {
+  return (Number(valor) || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+
+// Formata proporção como porcentagem: 0.4 -> "40%"
+function porcentagem(valor) {
+  return ((Number(valor) || 0) * 100).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + '%';
+}
+
+// Data de hoje no formato AAAA-MM-DD, no fuso do aparelho
+function hojeISO() {
+  const agora = new Date();
+  agora.setMinutes(agora.getMinutes() - agora.getTimezoneOffset());
+  return agora.toISOString().slice(0, 10);
+}
+
+// Soma dias a uma data AAAA-MM-DD
+function somarDias(dataISO, dias) {
+  const data = new Date(dataISO + 'T12:00:00');
+  data.setDate(data.getDate() + dias);
+  data.setMinutes(data.getMinutes() - data.getTimezoneOffset());
+  return data.toISOString().slice(0, 10);
+}
+
+// "2026-11-04" -> "04/11/2026"
+function dataBR(dataISO) {
+  if (!dataISO) return '';
+  const [ano, mes, dia] = dataISO.split('-');
+  return `${dia}/${mes}/${ano}`;
+}
+
+// "2026-11" -> "novembro de 2026"
+function nomeDoMes(mesISO) {
+  const data = new Date(mesISO + '-15T12:00:00');
+  return data.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' });
+}
+
+function mesAtual() {
+  return hojeISO().slice(0, 7);
+}
+
+// Identificador único simples para pedidos e despesas
+function novoId() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+}
+
+// Protege o HTML contra textos digitados pelo usuário
+function esc(texto) {
+  const mapa = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+  return String(texto ?? '').replace(/[&<>"']/g, c => mapa[c]);
+}
+
+function soDigitos(texto) {
+  return String(texto || '').replace(/\D/g, '');
+}
+
+// Monta o link do WhatsApp. Sem número válido, o WhatsApp pede para escolher o contato.
+function linkWhatsApp(numero, texto) {
+  let digitos = soDigitos(numero);
+  if (digitos.length === 10 || digitos.length === 11) digitos = '55' + digitos;
+  const valido = digitos.length >= 12 && !digitos.startsWith('0') && !digitos.startsWith('550');
+  const base = valido ? `https://wa.me/${digitos}` : 'https://wa.me/';
+  return `${base}?text=${encodeURIComponent(texto)}`;
+}
+
+// Abre o WhatsApp por um link (funciona melhor no celular que window.open)
+function abrirWhatsApp(numero, texto) {
+  const link = document.createElement('a');
+  link.href = linkWhatsApp(numero, texto);
+  link.target = '_blank';
+  link.rel = 'noopener';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+}
+
+// Caixa de confirmação dentro da página (substitui o confirm() do navegador)
+function confirmar(mensagem, textoBotao = 'Confirmar') {
+  return new Promise(resolver => {
+    const fundo = document.createElement('div');
+    fundo.className = 'confirmacao-fundo';
+    fundo.innerHTML = `
+      <div class="confirmacao" role="alertdialog" aria-modal="true" aria-labelledby="confirmacao-texto">
+        <p id="confirmacao-texto">${esc(mensagem)}</p>
+        <div class="pedido-acoes">
+          <button class="btn btn-secundario" data-resposta="nao">Voltar</button>
+          <button class="btn btn-primario" data-resposta="sim">${esc(textoBotao)}</button>
+        </div>
+      </div>`;
+    const fechar = resposta => {
+      fundo.remove();
+      document.removeEventListener('keydown', teclado);
+      resolver(resposta);
+    };
+    const teclado = e => { if (e.key === 'Escape') fechar(false); };
+    fundo.addEventListener('click', e => {
+      if (e.target === fundo) return fechar(false);
+      const botao = e.target.closest('[data-resposta]');
+      if (botao) fechar(botao.dataset.resposta === 'sim');
+    });
+    document.addEventListener('keydown', teclado);
+    document.body.appendChild(fundo);
+    fundo.querySelector('[data-resposta="sim"]').focus();
+  });
+}
+
+// Mensagem rápida no rodapé da tela
+function avisar(mensagem, tipo = 'sucesso') {
+  let toast = document.querySelector('#toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.setAttribute('role', 'status');
+    document.body.appendChild(toast);
+  }
+  toast.textContent = mensagem;
+  toast.className = `toast visivel ${tipo}`;
+  clearTimeout(avisar.timer);
+  avisar.timer = setTimeout(() => toast.classList.remove('visivel'), 3200);
+}
+
+// Desenho do geladinho (saquinho) na cor do sabor
+function svgGeladinho(cor, tamanho = 64) {
+  return `<svg width="${tamanho}" height="${tamanho}" viewBox="0 0 64 64" aria-hidden="true">
+    <path d="M24 6h16l-4 6h-8z" fill="#fff" stroke="#d9cfc9" stroke-width="1.5"/>
+    <rect x="22" y="11" width="20" height="48" rx="10" fill="#fff" stroke="#d9cfc9" stroke-width="1.5"/>
+    <rect x="25" y="18" width="14" height="38" rx="7" fill="${cor}"/>
+    <rect x="28" y="22" width="3" height="20" rx="1.5" fill="#fff" opacity=".45"/>
+  </svg>`;
+}
+
+// Baixa um texto como arquivo (CSV, JSON)
+function baixarArquivo(nome, texto, tipo = 'text/csv;charset=utf-8') {
+  const conteudo = tipo.startsWith('text/csv') ? '﻿' + texto : texto;
+  const arquivo = new Blob([conteudo], { type: tipo });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(arquivo);
+  link.download = nome;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+}
+
+</script>
+  <script>
+/* ==========================================================
+   api.js - "API" simulada: lê o catálogo de um arquivo JSON
+   Na UC11 (back-end) esta função passa a chamar um servidor real.
+   ========================================================== */
+
+async function buscarCatalogo() {
+  // Versão empacotada (um arquivo só) traz o catálogo embutido
+  if (window.CATALOGO_EMBUTIDO) return JSON.parse(JSON.stringify(window.CATALOGO_EMBUTIDO));
+  const resposta = await fetch('data/catalogo.json', { cache: 'no-store' });
+  if (!resposta.ok) {
+    throw new Error('Não foi possível carregar o cardápio.');
+  }
+  return resposta.json();
+}
+
+</script>
+  <script>
+/* ==========================================================
+   armazenamento.js - dados do painel guardados no aparelho
+   (localStorage). Os dados ficam só neste navegador.
+   ========================================================== */
+
+const CHAVES = {
+  pedidos: 'gf-pedidos',
+  despesas: 'gf-despesas',
+  config: 'gf-config',
+  precosIngredientes: 'gf-precos-ingredientes',
+  precosVenda: 'gf-precos-venda',
+  resgates: 'gf-resgates',
+  extras: 'gf-extras-producao',
+  demo: 'gf-dados-demo'
+};
+
+const CONFIG_PADRAO = {
+  nomeNegocio: 'Geladinho Fácil',
+  whatsapp: '',
+  estrelasParaBrinde: 5,
+  brinde: '1 geladinho grátis',
+  margem: 0.4,
+  embalagem: 0.05,
+  unidadesMes: 440
+};
+
+// Catálogo carregado do JSON (preenchido pelo painel.js)
+let CATALOGO = null;
+
+function ler(chave, padrao) {
+  try {
+    const valor = localStorage.getItem(chave);
+    return valor ? JSON.parse(valor) : padrao;
+  } catch (erro) {
+    return padrao;
+  }
+}
+
+function salvar(chave, valor) {
+  try {
+    localStorage.setItem(chave, JSON.stringify(valor));
+  } catch (erro) {
+    avisar('Não foi possível salvar neste navegador.', 'erro');
+  }
+}
+
+function lerConfig() { return { ...CONFIG_PADRAO, ...ler(CHAVES.config, {}) }; }
+function salvarConfig(config) { salvar(CHAVES.config, config); }
+
+function lerPedidos() { return ler(CHAVES.pedidos, []); }
+function salvarPedidos(pedidos) { salvar(CHAVES.pedidos, pedidos); }
+
+function lerDespesas() { return ler(CHAVES.despesas, []); }
+function salvarDespesas(despesas) { salvar(CHAVES.despesas, despesas); }
+
+function lerPrecosIngredientes() { return ler(CHAVES.precosIngredientes, {}); }
+
+// Preço de venda: o definido na Precificação ou, se não houver, o do catálogo
+function precoDoSabor(saborId) {
+  const definidos = ler(CHAVES.precosVenda, {});
+  if (definidos[saborId] != null) return Number(definidos[saborId]);
+  const sabor = CATALOGO.sabores.find(s => s.id === saborId);
+  return sabor && sabor.preco != null ? Number(sabor.preco) : 0;
+}
+
+function nomeDoSabor(saborId) {
+  const sabor = CATALOGO.sabores.find(s => s.id === saborId);
+  return sabor ? sabor.nome : saborId;
+}
+
+function totalDoPedido(pedido) {
+  return pedido.quantidade * pedido.precoUnitario - (pedido.desconto || 0);
+}
+
+</script>
+  <script>
+/* ==========================================================
+   pedidos.js - módulo Pedidos
+   Registro, status e mensagens prontas para o WhatsApp
+   ========================================================== */
+
+const STATUS = {
+  novo: 'Novo',
+  producao: 'Em produção',
+  entregue: 'Entregue',
+  cancelado: 'Cancelado'
+};
+
+const PROXIMO_STATUS = { novo: 'producao', producao: 'entregue' };
+
+let filtroPedidos = 'abertos';
+let formPedidoAberto = false;
+
+function mensagemPedido(tipo, pedido) {
+  const cfg = lerConfig();
+  const sabor = nomeDoSabor(pedido.saborId);
+  const itens = `${pedido.quantidade} geladinho${pedido.quantidade > 1 ? 's' : ''} de ${sabor}`;
+  const textos = {
+    confirmar: `Olá, ${pedido.cliente}! Seu pedido de ${itens} está confirmado para ${dataBR(pedido.data)}. Total: ${moeda(totalDoPedido(pedido))}. Obrigada pela preferência! ${cfg.nomeNegocio}`,
+    entrega: `Olá, ${pedido.cliente}! Seu pedido de ${itens} saiu para entrega.`,
+    pronto: `Olá, ${pedido.cliente}! Seu pedido de ${itens} está pronto para retirada.`,
+    cobrar: `Olá, ${pedido.cliente}! Passando para lembrar o pagamento do pedido de ${dataBR(pedido.data)} (${itens}): ${moeda(totalDoPedido(pedido))}. Obrigada!`
+  };
+  return textos[tipo];
+}
+
+function clientesConhecidos() {
+  const mapa = {};
+  lerPedidos().forEach(p => { mapa[p.cliente] = p.telefone; });
+  return mapa;
+}
+
+function renderPedidos(el) {
+  const pedidos = lerPedidos();
+  const conhecidos = clientesConhecidos();
+  const opcoesSabor = CATALOGO.sabores
+    .map(s => `<option value="${s.id}">${esc(s.nome)} (${moeda(precoDoSabor(s.id))})</option>`).join('');
+
+  const filtros = {
+    abertos: p => p.status === 'novo' || p.status === 'producao',
+    entregue: p => p.status === 'entregue',
+    cancelado: p => p.status === 'cancelado',
+    todos: () => true
+  };
+  const lista = pedidos.filter(filtros[filtroPedidos])
+    .sort((a, b) => filtroPedidos === 'abertos' ? a.data.localeCompare(b.data) : b.data.localeCompare(a.data))
+    .slice(0, 60);
+
+  el.innerHTML = `
+  <div class="tela">
+    <details class="cartao novo-pedido" id="caixa-novo-pedido" ${formPedidoAberto || pedidos.length === 0 ? 'open' : ''}>
+      <summary><h2>+ Novo pedido</h2></summary>
+      <form id="form-pedido" class="form-grade" novalidate>
+        <label>Cliente
+          <input name="cliente" list="lista-clientes" required autocomplete="off" placeholder="Nome do cliente">
+        </label>
+        <datalist id="lista-clientes">
+          ${Object.keys(conhecidos).map(n => `<option value="${esc(n)}">`).join('')}
+        </datalist>
+        <label>WhatsApp
+          <input name="telefone" type="tel" inputmode="tel" required placeholder="(66) 99999-9999">
+        </label>
+        <label>Sabor
+          <select name="saborId">${opcoesSabor}</select>
+        </label>
+        <label>Quantidade
+          <input name="quantidade" type="number" min="1" step="1" value="1" required>
+        </label>
+        <label>Preço unitário (R$)
+          <input name="precoUnitario" type="number" min="0" step="0.05" required>
+        </label>
+        <label>Desconto (R$)
+          <input name="desconto" type="number" min="0" step="0.05" value="0">
+        </label>
+        <label>Data de entrega
+          <input name="data" type="date" value="${hojeISO()}" required>
+        </label>
+        <label class="largura-total">Observação
+          <input name="obs" placeholder="Ex.: entregar na escola">
+        </label>
+        <p class="total-previo largura-total" id="total-previo"></p>
+        <p class="erro-form largura-total" id="erro-pedido" role="alert"></p>
+        <button class="btn btn-primario largura-total" type="submit">Registrar pedido</button>
+      </form>
+    </details>
+
+    <section>
+      <div class="abas" role="tablist" aria-label="Filtrar pedidos">
+        ${[['abertos', 'Em aberto'], ['entregue', 'Entregues'], ['cancelado', 'Cancelados'], ['todos', 'Todos']]
+          .map(([id, nome]) => `<button role="tab" class="aba ${filtroPedidos === id ? 'ativa' : ''}" aria-selected="${filtroPedidos === id}" data-filtro="${id}">${nome} <span>${pedidos.filter(filtros[id]).length}</span></button>`).join('')}
+      </div>
+      <div class="lista-pedidos">
+        ${lista.length ? lista.map(cartaoPedido).join('') : '<p class="vazio">Nenhum pedido aqui.</p>'}
+      </div>
+    </section>
+  </div>`;
+
+  const tela = el.firstElementChild;
+  const form = tela.querySelector('#form-pedido');
+  tela.querySelector('#caixa-novo-pedido').addEventListener('toggle', e => { formPedidoAberto = e.target.open; });
+
+  function atualizarPreco() {
+    form.precoUnitario.value = precoDoSabor(form.saborId.value).toFixed(2);
+    atualizarTotal();
+  }
+  function atualizarTotal() {
+    const total = Number(form.quantidade.value) * Number(form.precoUnitario.value) - Number(form.desconto.value || 0);
+    tela.querySelector('#total-previo').textContent = `Total do pedido: ${moeda(total)}`;
+  }
+  atualizarPreco();
+
+  form.saborId.addEventListener('change', atualizarPreco);
+  form.quantidade.addEventListener('input', atualizarTotal);
+  form.precoUnitario.addEventListener('input', atualizarTotal);
+  form.desconto.addEventListener('input', atualizarTotal);
+  form.cliente.addEventListener('change', () => {
+    const tel = conhecidos[form.cliente.value];
+    if (tel && !form.telefone.value) form.telefone.value = tel;
+  });
+
+  form.addEventListener('submit', evento => {
+    evento.preventDefault();
+    const erro = tela.querySelector('#erro-pedido');
+    const dados = Object.fromEntries(new FormData(form));
+    const quantidade = Number(dados.quantidade);
+
+    if (!dados.cliente.trim()) return (erro.textContent = 'Informe o nome do cliente.');
+    if (soDigitos(dados.telefone).length < 10) return (erro.textContent = 'Informe o WhatsApp com DDD.');
+    if (!Number.isInteger(quantidade) || quantidade < 1) return (erro.textContent = 'A quantidade deve ser um número inteiro maior que zero.');
+    if (!dados.data) return (erro.textContent = 'Informe a data de entrega.');
+
+    const todos = lerPedidos();
+    todos.push({
+      id: novoId(),
+      cliente: dados.cliente.trim(),
+      telefone: soDigitos(dados.telefone),
+      saborId: dados.saborId,
+      quantidade,
+      precoUnitario: Number(dados.precoUnitario),
+      desconto: Number(dados.desconto || 0),
+      data: dados.data,
+      obs: dados.obs.trim(),
+      status: 'novo'
+    });
+    salvarPedidos(todos);
+    filtroPedidos = 'abertos';
+    avisar('Pedido registrado.');
+    renderPedidos(el);
+  });
+
+  tela.addEventListener('click', async evento => {
+    const botao = evento.target.closest('button');
+    if (!botao) return;
+    if (botao.dataset.filtro) {
+      filtroPedidos = botao.dataset.filtro;
+      return renderPedidos(el);
+    }
+    const id = botao.dataset.id;
+    if (!id) return;
+    const todos = lerPedidos();
+    const pedido = todos.find(p => p.id === id);
+    if (!pedido) return;
+
+    switch (botao.dataset.acao) {
+      case 'avancar':
+        pedido.status = PROXIMO_STATUS[pedido.status] || pedido.status;
+        salvarPedidos(todos);
+        avisar(pedido.status === 'entregue'
+          ? `Entregue! ${pedido.cliente} ganhou ${pedido.quantidade} estrela(s).`
+          : `Pedido em produção.`);
+        break;
+      case 'cancelar':
+        if (!(await confirmar(`Cancelar o pedido de ${pedido.cliente}?`, 'Cancelar pedido'))) return;
+        pedido.status = 'cancelado';
+        salvarPedidos(todos);
+        avisar('Pedido cancelado.', 'alerta');
+        break;
+      case 'excluir':
+        if (!(await confirmar(`Excluir definitivamente o pedido de ${pedido.cliente}?`, 'Excluir'))) return;
+        salvarPedidos(todos.filter(p => p.id !== id));
+        avisar('Pedido excluído.', 'alerta');
+        break;
+      case 'whats':
+        abrirWhatsApp(pedido.telefone, mensagemPedido(botao.dataset.tipo, pedido));
+        return;
+      default:
+        return;
+    }
+    renderPedidos(el);
+  });
+}
+
+function cartaoPedido(p) {
+  const aberto = p.status === 'novo' || p.status === 'producao';
+  const sabor = CATALOGO.sabores.find(s => s.id === p.saborId);
+  return `
+  <article class="pedido">
+    <div class="pedido-icone">${svgGeladinho(sabor ? sabor.cor : '#ccc', 44)}</div>
+    <div class="pedido-info">
+      <div class="pedido-linha">
+        <strong>${esc(p.cliente)}</strong>
+        <span class="badge badge-${p.status}">${STATUS[p.status]}</span>
+      </div>
+      <p>${p.quantidade} × ${esc(nomeDoSabor(p.saborId))} · ${moeda(totalDoPedido(p))} · ${dataBR(p.data)}</p>
+      ${p.obs ? `<p class="suave">${esc(p.obs)}</p>` : ''}
+      <div class="pedido-acoes">
+        ${aberto ? `<button class="btn btn-pequeno btn-primario" data-acao="avancar" data-id="${p.id}">${p.status === 'novo' ? 'Iniciar produção' : 'Marcar entregue'}</button>` : ''}
+        ${p.status === 'novo' ? `<button class="btn btn-pequeno btn-whats" data-acao="whats" data-tipo="confirmar" data-id="${p.id}">Confirmar</button>` : ''}
+        ${p.status === 'producao' ? `<button class="btn btn-pequeno btn-whats" data-acao="whats" data-tipo="entrega" data-id="${p.id}">Saiu para entrega</button>
+        <button class="btn btn-pequeno btn-whats" data-acao="whats" data-tipo="pronto" data-id="${p.id}">Pronto p/ retirar</button>` : ''}
+        ${p.status === 'entregue' ? `<button class="btn btn-pequeno btn-whats" data-acao="whats" data-tipo="cobrar" data-id="${p.id}">Lembrar pagamento</button>` : ''}
+        ${aberto ? `<button class="btn btn-pequeno btn-secundario" data-acao="cancelar" data-id="${p.id}">Cancelar</button>` : ''}
+        ${!aberto ? `<button class="btn btn-pequeno btn-texto" data-acao="excluir" data-id="${p.id}">Excluir</button>` : ''}
+      </div>
+    </div>
+  </article>`;
+}
+
+</script>
+  <script>
+/* ==========================================================
+   fidelidade.js - módulo Fidelidade
+   1 estrela por geladinho entregue. A cada N estrelas, 1 brinde.
+   As estrelas são calculadas a partir dos pedidos entregues,
+   então nunca ficam diferentes do histórico.
+   ========================================================== */
+
+let buscaFidelidade = '';
+
+function resumoClientes() {
+  const cfg = lerConfig();
+  const resgates = ler(CHAVES.resgates, {});
+  const clientes = {};
+
+  lerPedidos().forEach(p => {
+    const c = clientes[p.telefone] || (clientes[p.telefone] = {
+      nome: p.cliente, telefone: p.telefone, estrelas: 0, pedidos: 0, ultimo: ''
+    });
+    c.nome = p.cliente;
+    if (p.status === 'entregue') {
+      c.estrelas += p.quantidade;
+      c.pedidos += 1;
+      if (p.data > c.ultimo) c.ultimo = p.data;
+    }
+  });
+
+  return Object.values(clientes).map(c => {
+    const ganhos = Math.floor(c.estrelas / cfg.estrelasParaBrinde);
+    const resgatados = resgates[c.telefone] || 0;
+    return {
+      ...c,
+      ganhos,
+      resgatados,
+      disponiveis: Math.max(0, ganhos - resgatados),
+      noCartao: c.estrelas % cfg.estrelasParaBrinde
+    };
+  }).sort((a, b) => b.estrelas - a.estrelas);
+}
+
+function desenharEstrelas(quantidade, total) {
+  let html = '';
+  for (let i = 0; i < total; i++) {
+    html += `<span class="estrela ${i < quantidade ? 'cheia' : ''}" aria-hidden="true">★</span>`;
+  }
+  return `<span class="estrelas" role="img" aria-label="${quantidade} de ${total} estrelas">${html}</span>`;
+}
+
+function mensagemCartao(cliente) {
+  const cfg = lerConfig();
+  const visual = '★'.repeat(cliente.noCartao) + '☆'.repeat(cfg.estrelasParaBrinde - cliente.noCartao);
+  let texto = `Olá, ${cliente.nome}! Seu cartão fidelidade ${cfg.nomeNegocio}: ${visual} (${cliente.noCartao} de ${cfg.estrelasParaBrinde}).`;
+  if (cliente.disponiveis > 0) texto += ` Você tem ${cliente.disponiveis} brinde(s) para retirar: ${cfg.brinde}!`;
+  else texto += ` Faltam ${cfg.estrelasParaBrinde - cliente.noCartao} para ganhar ${cfg.brinde}.`;
+  return texto;
+}
+
+function renderFidelidade(el) {
+  const cfg = lerConfig();
+  const todos = resumoClientes();
+  const termo = buscaFidelidade.toLowerCase();
+  const clientes = todos.filter(c => c.nome.toLowerCase().includes(termo));
+  const comBrinde = todos.filter(c => c.disponiveis > 0).length;
+
+  el.innerHTML = `
+  <div class="tela">
+    <div class="kpis">
+      <div class="kpi"><span>Clientes</span><strong>${todos.length}</strong></div>
+      <div class="kpi"><span>Com brinde a retirar</span><strong>${comBrinde}</strong></div>
+      <div class="kpi"><span>Regra</span><strong class="kpi-texto">${cfg.estrelasParaBrinde} estrelas = ${esc(cfg.brinde)}</strong></div>
+    </div>
+    <label class="busca">Buscar cliente
+      <input type="search" id="busca-cliente" value="${esc(buscaFidelidade)}" placeholder="Digite o nome">
+    </label>
+    <div class="grade-cartoes">
+      ${clientes.length ? clientes.map(c => `
+        <article class="cartao cartao-fidelidade ${c.disponiveis ? 'tem-brinde' : ''}">
+          <div class="pedido-linha">
+            <strong>${esc(c.nome)}</strong>
+            ${c.disponiveis ? `<span class="badge badge-brinde">${c.disponiveis} brinde(s)</span>` : ''}
+          </div>
+          ${desenharEstrelas(c.noCartao, cfg.estrelasParaBrinde)}
+          <p class="suave">${c.estrelas} estrelas no total · ${c.pedidos} pedido(s) entregue(s)${c.ultimo ? ' · último em ' + dataBR(c.ultimo) : ''}</p>
+          <div class="pedido-acoes">
+            <button class="btn btn-pequeno btn-whats" data-acao="enviar" data-tel="${c.telefone}">Enviar cartão</button>
+            <button class="btn btn-pequeno btn-primario" data-acao="resgatar" data-tel="${c.telefone}" ${c.disponiveis ? '' : 'disabled'}>Entregar brinde</button>
+          </div>
+        </article>`).join('') : '<p class="vazio">Os clientes aparecem aqui quando o primeiro pedido for marcado como entregue.</p>'}
+    </div>
+  </div>`;
+
+  const tela = el.firstElementChild;
+  const busca = tela.querySelector('#busca-cliente');
+  busca.addEventListener('input', () => {
+    buscaFidelidade = busca.value;
+    renderFidelidade(el);
+    const novoCampo = el.querySelector('#busca-cliente');
+    novoCampo.focus();
+    novoCampo.setSelectionRange(novoCampo.value.length, novoCampo.value.length);
+  });
+
+  tela.addEventListener('click', evento => {
+    const botao = evento.target.closest('button[data-tel]');
+    if (!botao) return;
+    const cliente = todos.find(c => c.telefone === botao.dataset.tel);
+    if (botao.dataset.acao === 'enviar') {
+      abrirWhatsApp(cliente.telefone, mensagemCartao(cliente));
+    }
+    if (botao.dataset.acao === 'resgatar') {
+      const resgates = ler(CHAVES.resgates, {});
+      resgates[cliente.telefone] = (resgates[cliente.telefone] || 0) + 1;
+      salvar(CHAVES.resgates, resgates);
+      // O brinde entra como despesa na DRE, pelo custo médio de um geladinho
+      const despesas = lerDespesas();
+      despesas.push({
+        id: novoId(), data: hojeISO(), categoria: 'Brindes da fidelidade',
+        descricao: `Brinde para ${cliente.nome}`, valor: Number(custoMedioGeladinho().toFixed(2))
+      });
+      salvarDespesas(despesas);
+      avisar(`Brinde entregue para ${cliente.nome}.`);
+      renderFidelidade(el);
+    }
+  });
+}
+
+</script>
+  <script>
+/* ==========================================================
+   producao.js - módulo Produção e compras
+   Soma os pedidos do período, calcula as receitas e monta
+   a lista de compras da viagem.
+   ========================================================== */
+
+const periodoProducao = { inicio: null, fim: null };
+
+function gerarPlanoProducao(pedidos, sabores, inicio, fim, extras) {
+  return sabores.map(sabor => {
+    const encomendas = pedidos
+      .filter(p => p.saborId === sabor.id && (p.status === 'novo' || p.status === 'producao'))
+      .filter(p => p.data >= inicio && p.data <= fim)
+      .reduce((soma, p) => soma + p.quantidade, 0);
+    const avulsas = Number(extras[sabor.id] || 0);
+    const unidades = encomendas + avulsas;
+    const receitas = Math.ceil(unidades / sabor.rendimento);
+    return {
+      sabor, encomendas, avulsas, unidades, receitas,
+      produzidas: receitas * sabor.rendimento,
+      sobra: receitas * sabor.rendimento - unidades
+    };
+  });
+}
+
+function gerarListaDeCompras(plano) {
+  const lista = {};
+  plano.forEach(linha => {
+    if (linha.receitas === 0) return;
+    linha.sabor.ingredientes.forEach(ing => {
+      lista[ing.item] = (lista[ing.item] || 0) + linha.receitas * ing.qtd;
+    });
+  });
+  return lista;
+}
+
+function renderProducao(el) {
+  if (!periodoProducao.inicio) {
+    periodoProducao.inicio = hojeISO();
+    periodoProducao.fim = somarDias(hojeISO(), 6);
+  }
+  const extras = ler(CHAVES.extras, {});
+  const plano = gerarPlanoProducao(lerPedidos(), CATALOGO.sabores, periodoProducao.inicio, periodoProducao.fim, extras);
+  const lista = gerarListaDeCompras(plano);
+  const precos = lerPrecosIngredientes();
+  const itens = Object.entries(lista);
+  const custoCompras = itens.reduce((soma, [item, qtd]) => soma + qtd * (precos[item] || 0), 0);
+  const totalUnidades = plano.reduce((s, l) => s + l.unidades, 0);
+
+  el.innerHTML = `
+  <div class="tela">
+    <section class="cartao">
+      <h2>Período da produção</h2>
+      <div class="form-grade">
+        <label>De <input type="date" id="prod-inicio" value="${periodoProducao.inicio}"></label>
+        <label>Até <input type="date" id="prod-fim" value="${periodoProducao.fim}"></label>
+      </div>
+      <p class="suave">Entram os pedidos novos e em produção com entrega no período, mais as unidades para venda avulsa que você informar.</p>
+    </section>
+
+    <section class="cartao">
+      <h2>Plano de produção · ${totalUnidades} geladinhos</h2>
+      <div class="tabela-rolagem">
+        <table class="tabela">
+          <thead><tr><th>Sabor</th><th>Encomendas</th><th>Venda avulsa</th><th>Receitas</th><th>Vai render</th><th>Sobra</th></tr></thead>
+          <tbody>
+            ${plano.map(l => `
+              <tr>
+                <td><span class="ponto" style="background:${l.sabor.cor}"></span>${esc(l.sabor.nome)}</td>
+                <td>${l.encomendas}</td>
+                <td><input class="input-tabela" type="number" min="0" step="1" value="${l.avulsas}" data-extra="${l.sabor.id}" aria-label="Unidades avulsas de ${esc(l.sabor.nome)}"></td>
+                <td><strong>${l.receitas}</strong></td>
+                <td>${l.produzidas}</td>
+                <td>${l.sobra}</td>
+              </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="cartao">
+      <div class="pedido-linha">
+        <h2>Lista de compras</h2>
+        ${custoCompras > 0 ? `<span class="badge badge-novo">Estimativa: ${moeda(custoCompras)}</span>` : ''}
+      </div>
+      ${itens.length ? `
+        <ul class="lista-compras">
+          ${itens.map(([item, qtd]) => `
+            <li><label><input type="checkbox"> <span><strong>${qtd}</strong> × ${esc(item)}</span></label>
+            ${precos[item] ? `<span class="suave">${moeda(qtd * precos[item])}</span>` : ''}</li>`).join('')}
+        </ul>
+        <div class="pedido-acoes">
+          <button class="btn btn-whats" id="enviar-lista">Enviar lista no meu WhatsApp</button>
+        </div>` : '<p class="vazio">Sem pedidos no período. Informe unidades de venda avulsa para planejar a produção.</p>'}
+    </section>
+  </div>`;
+
+  const tela = el.firstElementChild;
+  tela.querySelector('#prod-inicio').addEventListener('change', e => { periodoProducao.inicio = e.target.value; renderProducao(el); });
+  tela.querySelector('#prod-fim').addEventListener('change', e => { periodoProducao.fim = e.target.value; renderProducao(el); });
+  tela.querySelectorAll('[data-extra]').forEach(input => {
+    input.addEventListener('change', () => {
+      const valores = ler(CHAVES.extras, {});
+      valores[input.dataset.extra] = Math.max(0, Math.floor(Number(input.value) || 0));
+      salvar(CHAVES.extras, valores);
+      renderProducao(el);
+    });
+  });
+  const botao = tela.querySelector('#enviar-lista');
+  if (botao) {
+    botao.addEventListener('click', () => {
+      const cfg = lerConfig();
+      const linhas = itens.map(([item, qtd]) => `- ${qtd} × ${item}`).join('\n');
+      const texto = `Lista de compras ${cfg.nomeNegocio} (${dataBR(periodoProducao.inicio)} a ${dataBR(periodoProducao.fim)}):\n${linhas}` +
+        (custoCompras > 0 ? `\nEstimativa: ${moeda(custoCompras)}` : '');
+      abrirWhatsApp(cfg.whatsapp, texto);
+    });
+  }
+}
+
+</script>
+  <script>
+/* ==========================================================
+   precificacao.js - módulo Precificação
+   custo do produto = ingredientes ÷ rendimento + embalagem
+   preço sugerido   = (custo do produto + rateio) ÷ (1 - margem)
+   ========================================================== */
+
+function ingredientesDoCatalogo() {
+  const itens = [];
+  CATALOGO.sabores.forEach(s => s.ingredientes.forEach(i => {
+    if (!itens.includes(i.item)) itens.push(i.item);
+  }));
+  return itens;
+}
+
+function custoProduto(sabor, precos, embalagem) {
+  const custoReceita = sabor.ingredientes
+    .reduce((soma, ing) => soma + ing.qtd * (precos[ing.item] || 0), 0);
+  return custoReceita / sabor.rendimento + embalagem;
+}
+
+function rateioDespesas(despesasDoMes, unidadesDoMes) {
+  const total = despesasDoMes.reduce((soma, d) => soma + d.valor, 0);
+  return unidadesDoMes > 0 ? total / unidadesDoMes : 0;
+}
+
+function precoSugerido(custoProd, rateio, margem) {
+  return (custoProd + rateio) / (1 - margem);
+}
+
+// Custo do produto por sabor (sem rateio), usado na DRE e no Power BI
+function custosPorSabor() {
+  const precos = lerPrecosIngredientes();
+  const cfg = lerConfig();
+  const custos = {};
+  CATALOGO.sabores.forEach(s => { custos[s.id] = custoProduto(s, precos, cfg.embalagem); });
+  return custos;
+}
+
+function custoMedioGeladinho() {
+  const valores = Object.values(custosPorSabor());
+  return valores.reduce((a, b) => a + b, 0) / valores.length;
+}
+
+// Arredonda para cima em múltiplos de R$ 0,05
+function arredondarPreco(valor) {
+  return Math.ceil(valor * 20 - 1e-9) / 20;
+}
+
+function renderPrecificacao(el) {
+  const cfg = lerConfig();
+  const precos = lerPrecosIngredientes();
+  const mes = mesAtual();
+  const despesasMes = lerDespesas().filter(d => d.data.startsWith(mes));
+  const rateio = rateioDespesas(despesasMes, cfg.unidadesMes);
+  const semPreco = ingredientesDoCatalogo().filter(i => !precos[i]);
+
+  const linhas = CATALOGO.sabores.map(s => {
+    const custoReceita = s.ingredientes.reduce((soma, i) => soma + i.qtd * (precos[i.item] || 0), 0);
+    const custo = custoProduto(s, precos, cfg.embalagem);
+    const sugerido = arredondarPreco(precoSugerido(custo, rateio, cfg.margem));
+    const atual = precoDoSabor(s.id);
+    const margemAtual = atual > 0 ? (atual - custo - rateio) / atual : 0;
+    return { s, custoReceita, custo, sugerido, atual, margemAtual };
+  });
+
+  el.innerHTML = `
+  <div class="tela">
+    <section class="cartao">
+      <h2>1. Quanto você paga nos ingredientes</h2>
+      <p class="suave">Informe o preço de 1 unidade como aparece na receita (1 caixa, 1 ovo, 1 colher). Para a colher de achocolatado: preço do pacote ÷ colheres que ele rende.</p>
+      <div class="form-grade" id="precos-ingredientes">
+        ${ingredientesDoCatalogo().map(item => `
+          <label>${esc(item)}
+            <input type="number" min="0" step="0.01" data-item="${esc(item)}" value="${precos[item] ?? ''}" placeholder="R$ 0,00">
+          </label>`).join('')}
+      </div>
+      ${semPreco.length ? `<p class="alerta-texto">Faltam preços para: ${semPreco.map(esc).join(', ')}. O custo fica abaixo do real até você preencher.</p>` : ''}
+    </section>
+
+    <section class="cartao">
+      <h2>2. Parâmetros</h2>
+      <div class="form-grade">
+        <label>Margem desejada (%)
+          <input type="number" id="cfg-margem" min="0" max="90" step="1" value="${Math.round(cfg.margem * 100)}">
+        </label>
+        <label>Embalagem por unidade (R$)
+          <input type="number" id="cfg-embalagem" min="0" step="0.01" value="${cfg.embalagem}">
+        </label>
+        <label>Geladinhos vendidos por mês
+          <input type="number" id="cfg-unidades" min="1" step="1" value="${cfg.unidadesMes}">
+        </label>
+      </div>
+      <p class="suave">Despesas lançadas em ${nomeDoMes(mes)}: ${moeda(despesasMes.reduce((s, d) => s + d.valor, 0))}. Rateio por geladinho: <strong>${moeda(rateio)}</strong>.</p>
+    </section>
+
+    <section class="cartao">
+      <h2>3. Custo e preço por sabor</h2>
+      <div class="tabela-rolagem">
+        <table class="tabela">
+          <thead><tr><th>Sabor</th><th>Custo da receita</th><th>Custo por unidade</th><th>+ Rateio</th><th>Preço sugerido</th><th>Preço atual</th><th>Margem atual</th><th></th></tr></thead>
+          <tbody>
+            ${linhas.map(l => `
+              <tr>
+                <td><span class="ponto" style="background:${l.s.cor}"></span>${esc(l.s.nome)}</td>
+                <td>${moeda(l.custoReceita)} <span class="suave">(${l.s.rendimento} un.)</span></td>
+                <td>${moeda(l.custo)}</td>
+                <td>${moeda(l.custo + rateio)}</td>
+                <td><strong>${moeda(l.sugerido)}</strong></td>
+                <td><input class="input-tabela" type="number" min="0" step="0.05" value="${l.atual.toFixed(2)}" data-preco="${l.s.id}" aria-label="Preço de venda de ${esc(l.s.nome)}"></td>
+                <td class="${l.margemAtual < cfg.margem ? 'negativo' : 'positivo'}">${porcentagem(l.margemAtual)}</td>
+                <td><button class="btn btn-pequeno btn-secundario" data-usar="${l.s.id}" data-valor="${l.sugerido}">Usar sugerido</button></td>
+              </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>
+      <p class="suave">Margem atual em vermelho = abaixo da margem desejada.</p>
+      <div class="pedido-acoes">
+        <button class="btn btn-primario" id="exportar-catalogo">Atualizar cardápio (baixar catalogo.json)</button>
+      </div>
+      <p class="suave">O cardápio público só muda quando o novo catalogo.json for publicado no GitHub, porque o sistema não tem servidor.</p>
+    </section>
+  </div>`;
+
+  const tela = el.firstElementChild;
+
+  tela.querySelectorAll('[data-item]').forEach(input => input.addEventListener('change', () => {
+    const atuais = lerPrecosIngredientes();
+    if (input.value === '') delete atuais[input.dataset.item];
+    else atuais[input.dataset.item] = Math.max(0, Number(input.value));
+    salvar(CHAVES.precosIngredientes, atuais);
+    renderPrecificacao(el);
+  }));
+
+  const salvarParametro = (campo, valor) => {
+    const atual = lerConfig();
+    atual[campo] = valor;
+    salvarConfig(atual);
+    renderPrecificacao(el);
+  };
+  tela.querySelector('#cfg-margem').addEventListener('change', e =>
+    salvarParametro('margem', Math.min(0.9, Math.max(0, Number(e.target.value) / 100))));
+  tela.querySelector('#cfg-embalagem').addEventListener('change', e =>
+    salvarParametro('embalagem', Math.max(0, Number(e.target.value))));
+  tela.querySelector('#cfg-unidades').addEventListener('change', e =>
+    salvarParametro('unidadesMes', Math.max(1, Math.floor(Number(e.target.value)))));
+
+  const definirPreco = (id, valor) => {
+    const definidos = ler(CHAVES.precosVenda, {});
+    definidos[id] = Number(Number(valor).toFixed(2));
+    salvar(CHAVES.precosVenda, definidos);
+  };
+  tela.querySelectorAll('[data-preco]').forEach(input => input.addEventListener('change', () => {
+    definirPreco(input.dataset.preco, Math.max(0, Number(input.value)));
+    avisar('Preço atualizado. Os próximos pedidos usam o novo valor.');
+    renderPrecificacao(el);
+  }));
+  tela.querySelectorAll('[data-usar]').forEach(botao => botao.addEventListener('click', () => {
+    definirPreco(botao.dataset.usar, botao.dataset.valor);
+    avisar('Preço sugerido aplicado.');
+    renderPrecificacao(el);
+  }));
+
+  tela.querySelector('#exportar-catalogo').addEventListener('click', () => {
+    const novo = JSON.parse(JSON.stringify(CATALOGO));
+    novo.sabores.forEach(s => { s.preco = precoDoSabor(s.id); });
+    novo.precosDeExemplo = false;
+    baixarArquivo('catalogo.json', JSON.stringify(novo, null, 2), 'application/json');
+  });
+}
+
+</script>
+  <script>
+/* ==========================================================
+   financeiro.js - módulo Financeiro e DRE
+   DRE simplificada para gestão do negócio (não substitui
+   a contabilidade).
+   ========================================================== */
+
+const CATEGORIAS_DESPESA = [
+  'Viagem de compras',
+  'Gás e energia',
+  'Embalagens',
+  'Internet e telefone',
+  'Brindes da fidelidade',
+  'DAS-MEI',
+  'Outras'
+];
+
+let mesFinanceiro = null;
+
+function gerarDRE(pedidos, despesas, custos, mes) {
+  const doMes = item => item.data.startsWith(mes);
+  const entregues = pedidos.filter(p => p.status === 'entregue' && doMes(p));
+  const receitaBruta = entregues.reduce((s, p) => s + p.quantidade * p.precoUnitario, 0);
+  const descontos = entregues.reduce((s, p) => s + (p.desconto || 0), 0);
+  const receitaLiquida = receitaBruta - descontos;
+  const custoProdutos = entregues.reduce((s, p) => s + p.quantidade * (custos[p.saborId] || 0), 0);
+  const lucroBruto = receitaLiquida - custoProdutos;
+  const despesasDoMes = despesas.filter(doMes);
+  const totalDespesas = despesasDoMes.reduce((s, d) => s + d.valor, 0);
+  const resultado = lucroBruto - totalDespesas;
+  const porCategoria = {};
+  despesasDoMes.forEach(d => { porCategoria[d.categoria] = (porCategoria[d.categoria] || 0) + d.valor; });
+  return {
+    receitaBruta, descontos, receitaLiquida, custoProdutos, lucroBruto,
+    despesas: totalDespesas, porCategoria, resultado,
+    unidades: entregues.reduce((s, p) => s + p.quantidade, 0),
+    margem: receitaLiquida > 0 ? resultado / receitaLiquida : 0
+  };
+}
+
+function textoDRE(dre, mes) {
+  const cfg = lerConfig();
+  return [
+    `DRE ${cfg.nomeNegocio} - ${nomeDoMes(mes)}`,
+    `Receita bruta: ${moeda(dre.receitaBruta)}`,
+    `(-) Descontos: ${moeda(dre.descontos)}`,
+    `(=) Receita líquida: ${moeda(dre.receitaLiquida)}`,
+    `(-) Custo dos produtos: ${moeda(dre.custoProdutos)}`,
+    `(=) Lucro bruto: ${moeda(dre.lucroBruto)}`,
+    `(-) Despesas: ${moeda(dre.despesas)}`,
+    `(=) Resultado: ${moeda(dre.resultado)}`,
+    `Margem líquida: ${porcentagem(dre.margem)}`,
+    `Geladinhos vendidos: ${dre.unidades}`
+  ].join('\n');
+}
+
+function renderFinanceiro(el) {
+  if (!mesFinanceiro) mesFinanceiro = mesAtual();
+  const mes = mesFinanceiro;
+  const dre = gerarDRE(lerPedidos(), lerDespesas(), custosPorSabor(), mes);
+  const despesasMes = lerDespesas().filter(d => d.data.startsWith(mes)).sort((a, b) => b.data.localeCompare(a.data));
+  const base = dre.receitaLiquida || 1;
+  const linha = (rotulo, valor, classe = '') => `
+    <tr class="${classe}">
+      <td>${rotulo}</td>
+      <td class="${valor < 0 ? 'negativo' : ''}">${moeda(valor)}</td>
+      <td class="suave">${dre.receitaLiquida ? porcentagem(valor / base) : '-'}</td>
+    </tr>`;
+
+  el.innerHTML = `
+  <div class="tela">
+    <div class="barra-acoes">
+      <label class="inline">Mês <input type="month" id="mes-dre" value="${mes}"></label>
+      <button class="btn btn-whats btn-pequeno" id="enviar-dre">Enviar DRE no WhatsApp</button>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><span>Receita líquida</span><strong>${moeda(dre.receitaLiquida)}</strong></div>
+      <div class="kpi"><span>Resultado</span><strong class="${dre.resultado < 0 ? 'negativo' : 'positivo'}">${moeda(dre.resultado)}</strong></div>
+      <div class="kpi"><span>Margem líquida</span><strong>${porcentagem(dre.margem)}</strong></div>
+      <div class="kpi"><span>Geladinhos vendidos</span><strong>${dre.unidades}</strong></div>
+    </div>
+
+    <section class="cartao">
+      <h2>DRE de ${nomeDoMes(mes)}</h2>
+      <div class="tabela-rolagem">
+        <table class="tabela tabela-dre">
+          <thead><tr><th>Linha</th><th>Valor</th><th>% da receita líquida</th></tr></thead>
+          <tbody>
+            ${linha('(+) Receita bruta de vendas', dre.receitaBruta)}
+            ${linha('(−) Descontos concedidos', -dre.descontos)}
+            ${linha('(=) Receita líquida', dre.receitaLiquida, 'subtotal')}
+            ${linha('(−) Custo dos produtos vendidos', -dre.custoProdutos)}
+            ${linha('(=) Lucro bruto', dre.lucroBruto, 'subtotal')}
+            ${Object.entries(dre.porCategoria).map(([cat, valor]) => linha(`(−) ${esc(cat)}`, -valor, 'detalhe')).join('')}
+            ${linha('(−) Total de despesas operacionais', -dre.despesas)}
+            ${linha('(=) Resultado do mês', dre.resultado, 'total')}
+          </tbody>
+        </table>
+      </div>
+      <p class="suave">Receita considera só pedidos entregues. O custo dos produtos usa os preços de ingredientes cadastrados hoje na Precificação.</p>
+    </section>
+
+    <section class="cartao">
+      <h2>Lançar despesa</h2>
+      <form id="form-despesa" class="form-grade" novalidate>
+        <label>Data <input name="data" type="date" value="${hojeISO()}" required></label>
+        <label>Categoria
+          <select name="categoria">${CATEGORIAS_DESPESA.map(c => `<option>${c}</option>`).join('')}</select>
+        </label>
+        <label>Descrição <input name="descricao" placeholder="Ex.: passagem para fazer compras"></label>
+        <label>Valor (R$) <input name="valor" type="number" min="0.01" step="0.01" required></label>
+        <p class="erro-form largura-total" id="erro-despesa" role="alert"></p>
+        <button class="btn btn-primario largura-total" type="submit">Lançar despesa</button>
+      </form>
+    </section>
+
+    <section class="cartao">
+      <h2>Despesas do mês</h2>
+      ${despesasMes.length ? `
+      <div class="tabela-rolagem">
+        <table class="tabela">
+          <thead><tr><th>Data</th><th>Categoria</th><th>Descrição</th><th>Valor</th><th></th></tr></thead>
+          <tbody>
+            ${despesasMes.map(d => `
+              <tr>
+                <td>${dataBR(d.data)}</td><td>${esc(d.categoria)}</td><td>${esc(d.descricao || '')}</td>
+                <td>${moeda(d.valor)}</td>
+                <td><button class="btn btn-pequeno btn-texto" data-excluir="${d.id}">Excluir</button></td>
+              </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>` : '<p class="vazio">Nenhuma despesa lançada neste mês.</p>'}
+    </section>
+  </div>`;
+
+  const tela = el.firstElementChild;
+  tela.querySelector('#mes-dre').addEventListener('change', e => {
+    if (e.target.value) { mesFinanceiro = e.target.value; renderFinanceiro(el); }
+  });
+  tela.querySelector('#enviar-dre').addEventListener('click', () =>
+    abrirWhatsApp(lerConfig().whatsapp, textoDRE(dre, mes)));
+
+  tela.querySelector('#form-despesa').addEventListener('submit', evento => {
+    evento.preventDefault();
+    const dados = Object.fromEntries(new FormData(evento.target));
+    const valor = Number(dados.valor);
+    const erro = tela.querySelector('#erro-despesa');
+    if (!dados.data) return (erro.textContent = 'Informe a data.');
+    if (!(valor > 0)) return (erro.textContent = 'Informe um valor maior que zero.');
+    const despesas = lerDespesas();
+    despesas.push({ id: novoId(), data: dados.data, categoria: dados.categoria, descricao: dados.descricao.trim(), valor });
+    salvarDespesas(despesas);
+    mesFinanceiro = dados.data.slice(0, 7);
+    avisar('Despesa lançada.');
+    renderFinanceiro(el);
+  });
+
+  tela.addEventListener('click', async evento => {
+    const botao = evento.target.closest('[data-excluir]');
+    if (!botao) return;
+    if (!(await confirmar('Excluir esta despesa?', 'Excluir'))) return;
+    salvarDespesas(lerDespesas().filter(d => d.id !== botao.dataset.excluir));
+    renderFinanceiro(el);
+  });
+}
+
+</script>
+  <script>
+/* ==========================================================
+   relatorios.js - módulo Relatórios
+   Exporta CSV para o Power BI, faz backup e gera dados
+   de demonstração para testes.
+   ========================================================== */
+
+function paraCSV(linhas, colunasPadrao) {
+  const colunas = linhas.length ? Object.keys(linhas[0]) : colunasPadrao;
+  const celula = v => typeof v === 'number' ? v : `"${String(v ?? '').replace(/"/g, '""')}"`;
+  const corpo = linhas.map(l => colunas.map(c => celula(l[c])).join(';'));
+  return [colunas.join(';'), ...corpo].join('\n');
+}
+
+// O telefone não sai do app: cada cliente vira um número (LGPD, princípio da necessidade)
+function linhasPedidosParaBI(pedidos) {
+  const ids = {};
+  return pedidos.map(p => {
+    if (!ids[p.telefone]) ids[p.telefone] = Object.keys(ids).length + 1;
+    return {
+      id_pedido: p.id, data: p.data, cliente_id: ids[p.telefone], sabor: nomeDoSabor(p.saborId),
+      quantidade: p.quantidade, preco_unitario: p.precoUnitario,
+      desconto: p.desconto || 0, status: STATUS[p.status]
+    };
+  });
+}
+
+function linhasSaboresParaBI() {
+  const custos = custosPorSabor();
+  return CATALOGO.sabores.map(s => ({
+    sabor: s.nome, custo_unitario: Number(custos[s.id].toFixed(4)),
+    rendimento: s.rendimento, preco_venda: precoDoSabor(s.id)
+  }));
+}
+
+function linhasDespesasParaBI() {
+  return lerDespesas().map(d => ({ data: d.data, categoria: d.categoria, descricao: d.descricao || '', valor: d.valor }));
+}
+
+function exportarBackup() {
+  const dados = {};
+  Object.entries(CHAVES).forEach(([nome, chave]) => { dados[nome] = ler(chave, null); });
+  dados.geradoEm = new Date().toISOString();
+  baixarArquivo(`backup-geladinho-${hojeISO()}.json`, JSON.stringify(dados, null, 2), 'application/json');
+}
+
+function importarBackup(arquivo, aoTerminar) {
+  const leitor = new FileReader();
+  leitor.onload = () => {
+    try {
+      const dados = JSON.parse(leitor.result);
+      if (!Array.isArray(dados.pedidos)) throw new Error('formato');
+      Object.entries(CHAVES).forEach(([nome, chave]) => {
+        if (dados[nome] != null) salvar(chave, dados[nome]);
+        else localStorage.removeItem(chave);
+      });
+      avisar('Backup restaurado.');
+      aoTerminar();
+    } catch (erro) {
+      avisar('Arquivo de backup inválido.', 'erro');
+    }
+  };
+  leitor.readAsText(arquivo);
+}
+
+function apagarTudo() {
+  Object.values(CHAVES).forEach(chave => { try { localStorage.removeItem(chave); } catch (e) { /* ignora */ } });
+}
+
+// Gerador de números pseudoaleatórios com semente: os dados de demonstração saem sempre iguais
+function geradorAleatorio(semente) {
+  return function () {
+    semente |= 0; semente = semente + 0x6D2B79F5 | 0;
+    let t = Math.imul(semente ^ semente >>> 15, 1 | semente);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+// Dados FICTÍCIOS para testar o sistema e o Power BI (cerca de 110 geladinhos por semana)
+function carregarDadosDemo() {
+  const aleatorio = geradorAleatorio(2026);
+  const nomes = ['Ana P.', 'Bruno S.', 'Carla M.', 'Diego R.', 'Elaine T.', 'Fábio L.', 'Gabi O.', 'Heloísa C.',
+    'Igor N.', 'Juliana F.', 'Kauã B.', 'Larissa A.', 'Marcos V.', 'Natália G.', 'Otávio D.', 'Paula H.', 'Rafael E.', 'Sabrina I.'];
+  // Telefones começando com 0 são inválidos de propósito: o WhatsApp não envia para ninguém real
+  const clientes = nomes.map((nome, i) => ({ nome, telefone: '000000000' + String(i + 1).padStart(2, '0') }));
+  const pesos = [['pudim', 0.3], ['morango', 0.25], ['maracuja', 0.2], ['chocolate', 0.25]];
+  const sortearSabor = () => {
+    let r = aleatorio();
+    for (const [id, peso] of pesos) { if ((r -= peso) <= 0) return id; }
+    return 'pudim';
+  };
+
+  salvar(CHAVES.precosIngredientes, {
+    'Ovos': 0.9, 'Leite condensado': 6.5, 'Leite (medida da lata)': 1.5, 'Creme de leite': 3.8,
+    'Suco de morango (pacote)': 1.6, 'Suco de maracujá (pacote)': 1.6, 'Achocolatado (colher)': 0.3
+  });
+  salvar(CHAVES.precosVenda, {});
+  salvar(CHAVES.resgates, {});
+
+  const hoje = hojeISO();
+  const pedidos = [];
+  for (let dia = -62; dia <= 6; dia++) {
+    const data = somarDias(hoje, dia);
+    const semana = new Date(data + 'T12:00:00').getDay();
+    if (semana === 0) continue; // domingo sem entregas
+    const quantidadePedidos = 3 + Math.floor(aleatorio() * 3);
+    for (let n = 0; n < quantidadePedidos; n++) {
+      const cliente = clientes[Math.floor(aleatorio() * clientes.length)];
+      const saborId = sortearSabor();
+      let status = dia < 0 ? 'entregue' : dia === 0 ? 'producao' : 'novo';
+      if (dia < 0 && aleatorio() < 0.05) status = 'cancelado';
+      const quantidade = 1 + Math.floor(aleatorio() * 7);
+      pedidos.push({
+        id: novoId() + n, cliente: cliente.nome, telefone: cliente.telefone, saborId, quantidade,
+        precoUnitario: precoDoSabor(saborId), desconto: quantidade >= 6 && aleatorio() < 0.3 ? 1 : 0,
+        data, obs: '', status
+      });
+    }
+  }
+
+  const despesas = [];
+  for (let dia = -62; dia <= 0; dia++) {
+    const data = somarDias(hoje, dia);
+    const d = new Date(data + 'T12:00:00');
+    if (d.getDay() === 1) despesas.push({ id: novoId() + dia, data, categoria: 'Viagem de compras', descricao: 'Passagem e frete (exemplo)', valor: 40 });
+    if (d.getDate() === 5) {
+      despesas.push({ id: novoId() + 'g' + dia, data, categoria: 'Gás e energia', descricao: 'Exemplo', valor: 35 });
+      despesas.push({ id: novoId() + 'e' + dia, data, categoria: 'Embalagens', descricao: 'Saquinhos (exemplo)', valor: 22 });
+    }
+  }
+
+  salvarPedidos(pedidos);
+  salvarDespesas(despesas);
+  salvar(CHAVES.demo, true);
+}
+
+function renderRelatorios(el) {
+  const pedidos = lerPedidos();
+  el.innerHTML = `
+  <div class="tela">
+    <section class="cartao">
+      <h2>Exportar para o Power BI</h2>
+      <p class="suave">Três arquivos CSV separados por ponto e vírgula, com números em ponto decimal. No Power BI, use Obter dados → Texto/CSV e escolha a localidade Inglês (Estados Unidos) ao alterar os tipos. O telefone dos clientes não é exportado.</p>
+      <div class="grade-botoes">
+        <button class="btn btn-primario" data-csv="pedidos">pedidos.csv <small>${pedidos.length} linhas</small></button>
+        <button class="btn btn-primario" data-csv="sabores">sabores.csv <small>${CATALOGO.sabores.length} linhas</small></button>
+        <button class="btn btn-primario" data-csv="despesas">despesas.csv <small>${lerDespesas().length} linhas</small></button>
+      </div>
+    </section>
+
+    <section class="cartao">
+      <h2>Backup</h2>
+      <p class="suave">Os dados ficam só neste aparelho. Exporte o backup toda semana e guarde o arquivo no seu WhatsApp ou e-mail.</p>
+      <div class="grade-botoes">
+        <button class="btn btn-secundario" id="btn-backup">Exportar backup</button>
+        <label class="btn btn-secundario">Restaurar backup
+          <input type="file" accept=".json,application/json" id="arquivo-backup" hidden>
+        </label>
+      </div>
+    </section>
+
+    <section class="cartao">
+      <h2>Dados de demonstração</h2>
+      <p class="suave">Gera 9 semanas de pedidos e despesas fictícios, com preços de ingredientes de exemplo, para testar o sistema, a DRE e o Power BI. Substitui os dados atuais.</p>
+      <div class="grade-botoes">
+        <button class="btn btn-secundario" id="btn-demo">Carregar dados de demonstração</button>
+        <button class="btn btn-perigo" id="btn-apagar">Apagar todos os dados</button>
+      </div>
+    </section>
+  </div>`;
+
+  const tela = el.firstElementChild;
+  tela.addEventListener('click', evento => {
+    const botao = evento.target.closest('[data-csv]');
+    if (!botao) return;
+    const tipo = botao.dataset.csv;
+    const conteudo = {
+      pedidos: () => paraCSV(linhasPedidosParaBI(lerPedidos()), ['id_pedido', 'data', 'cliente_id', 'sabor', 'quantidade', 'preco_unitario', 'desconto', 'status']),
+      sabores: () => paraCSV(linhasSaboresParaBI()),
+      despesas: () => paraCSV(linhasDespesasParaBI(), ['data', 'categoria', 'descricao', 'valor'])
+    }[tipo]();
+    baixarArquivo(`${tipo}.csv`, conteudo);
+  });
+  tela.querySelector('#btn-backup').addEventListener('click', exportarBackup);
+  tela.querySelector('#arquivo-backup').addEventListener('change', e => {
+    if (e.target.files[0]) importarBackup(e.target.files[0], () => navegar());
+  });
+  tela.querySelector('#btn-demo').addEventListener('click', async () => {
+    if (lerPedidos().length && !(await confirmar('Isso substitui os pedidos e despesas atuais. Continuar?', 'Substituir dados'))) return;
+    carregarDadosDemo();
+    avisar('Dados de demonstração carregados.');
+    navegar();
+  });
+  tela.querySelector('#btn-apagar').addEventListener('click', async () => {
+    if (!(await confirmar('Apagar todos os pedidos, despesas, preços e configurações deste aparelho?', 'Apagar tudo'))) return;
+    apagarTudo();
+    avisar('Dados apagados.', 'alerta');
+    navegar();
+  });
+}
+
+</script>
+  <script>
+/* ==========================================================
+   painel.js - menu, navegação e telas Início, Configurações e Mais
+   Carregado por último: usa as funções dos outros módulos.
+   ========================================================== */
+
+const ICONES = {
+  inicio: 'M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z',
+  pedidos: 'M9 3h6v3H9zM15 5h3a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h3M8 11h8M8 15h6',
+  fidelidade: 'M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9z',
+  producao: 'M3 4h2l2.4 11h11.2L21 7H6.2M9 20.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM18 20.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z',
+  precificacao: 'M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9zM7.5 7.5h.01',
+  financeiro: 'M4 20V11M10 20V5M16 20v-6M2 20h20',
+  relatorios: 'M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8zM14 3v5h5M12 11v6M9 14l3 3 3-3',
+  configuracoes: 'M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1M15 4v4M9 10v4M17 16v4',
+  mais: 'M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z'
+};
+
+const MODULOS = [
+  { id: 'inicio', titulo: 'Início', render: renderInicio },
+  { id: 'pedidos', titulo: 'Pedidos', render: renderPedidos },
+  { id: 'fidelidade', titulo: 'Fidelidade', render: renderFidelidade },
+  { id: 'producao', titulo: 'Produção e compras', curto: 'Produção', render: renderProducao },
+  { id: 'precificacao', titulo: 'Precificação', render: renderPrecificacao },
+  { id: 'financeiro', titulo: 'Financeiro e DRE', curto: 'Finanças', render: renderFinanceiro },
+  { id: 'relatorios', titulo: 'Relatórios', render: renderRelatorios },
+  { id: 'configuracoes', titulo: 'Configurações', render: renderConfiguracoes }
+];
+const NO_RODAPE = ['inicio', 'pedidos', 'producao', 'financeiro'];
+const TELA_MAIS = { id: 'mais', titulo: 'Mais opções', render: renderMais };
+
+function icone(nome) {
+  return `<svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="${ICONES[nome]}"/></svg>`;
+}
+
+function montarMenus() {
+  document.querySelector('#menu-lateral-lista').innerHTML = MODULOS.map(m =>
+    `<li><a href="#painel-${m.id}" data-tela="${m.id}">${icone(m.id)}<span>${m.titulo}</span></a></li>`).join('');
+
+  document.querySelector('#menu-inferior').innerHTML = [...MODULOS.filter(m => NO_RODAPE.includes(m.id)), TELA_MAIS]
+    .map(m => `<a href="#painel-${m.id}" data-tela="${m.id}">${icone(m.id)}<span>${m.curto || (m.id === 'mais' ? 'Mais' : m.titulo)}</span></a>`).join('');
+}
+
+function navegar() {
+  // No arquivo único, as telas do painel usam endereços #painel-pedidos, #painel-financeiro...
+  const hash = location.hash.slice(1);
+  const id = hash.startsWith('painel-') ? hash.slice(7) : 'inicio';
+  const modulo = MODULOS.find(m => m.id === id) || (id === 'mais' ? TELA_MAIS : MODULOS[0]);
+  const conteudo = document.querySelector('#conteudo');
+
+  document.querySelector('#titulo-tela').textContent = modulo.titulo;
+  document.title = `${modulo.titulo} | ${lerConfig().nomeNegocio}`;
+  document.querySelectorAll('[data-tela]').forEach(link => {
+    const ativo = link.dataset.tela === modulo.id ||
+      (modulo.id !== 'mais' && !NO_RODAPE.includes(modulo.id) && link.dataset.tela === 'mais' && link.closest('#menu-inferior'));
+    link.classList.toggle('ativo', Boolean(ativo));
+    if (ativo) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
+  });
+  document.querySelector('#selo-demo').hidden = !ler(CHAVES.demo, false);
+  document.querySelector('#nome-negocio-menu').textContent = lerConfig().nomeNegocio;
+
+  modulo.render(conteudo);
+  window.scrollTo(0, 0);
+}
+
+/* ---------- Início ---------- */
+
+function renderInicio(el) {
+  const pedidos = lerPedidos();
+  const mes = mesAtual();
+  const dre = gerarDRE(pedidos, lerDespesas(), custosPorSabor(), mes);
+  const abertos = pedidos.filter(p => p.status === 'novo' || p.status === 'producao')
+    .sort((a, b) => a.data.localeCompare(b.data));
+  const paraHoje = abertos.filter(p => p.data <= hojeISO());
+  const brindes = resumoClientes().filter(c => c.disponiveis > 0).length;
+
+  const porSabor = CATALOGO.sabores.map(s => ({
+    s,
+    unidades: pedidos.filter(p => p.status === 'entregue' && p.saborId === s.id && p.data.startsWith(mes))
+      .reduce((soma, p) => soma + p.quantidade, 0)
+  }));
+  const maior = Math.max(1, ...porSabor.map(x => x.unidades));
+
+  el.innerHTML = `
+  <div class="tela">
+    ${pedidos.length === 0 ? `
+      <section class="cartao boas-vindas">
+        <h2>Bem-vinda ao painel</h2>
+        <p>Registre o primeiro pedido ou carregue dados de demonstração para conhecer o sistema.</p>
+        <div class="pedido-acoes">
+          <a class="btn btn-primario" href="#painel-pedidos">Registrar pedido</a>
+          <button class="btn btn-secundario" id="inicio-demo">Carregar dados de demonstração</button>
+        </div>
+      </section>` : ''}
+
+    <div class="kpis">
+      <a class="kpi" href="#painel-pedidos"><span>Entregas para hoje</span><strong>${paraHoje.length}</strong></a>
+      <a class="kpi" href="#painel-pedidos"><span>Pedidos em aberto</span><strong>${abertos.length}</strong></a>
+      <a class="kpi" href="#painel-financeiro"><span>Receita em ${nomeDoMes(mes).split(' ')[0]}</span><strong>${moeda(dre.receitaLiquida)}</strong></a>
+      <a class="kpi" href="#painel-financeiro"><span>Resultado do mês</span><strong class="${dre.resultado < 0 ? 'negativo' : 'positivo'}">${moeda(dre.resultado)}</strong></a>
+      <a class="kpi" href="#painel-fidelidade"><span>Brindes a entregar</span><strong>${brindes}</strong></a>
+    </div>
+
+    <div class="duas-colunas">
+      <section class="cartao">
+        <div class="pedido-linha"><h2>Próximas entregas</h2><a href="#painel-pedidos" class="link">Ver todos</a></div>
+        ${abertos.length ? `<ul class="lista-simples">
+          ${abertos.slice(0, 6).map(p => `
+            <li>
+              <span>${svgGeladinho((CATALOGO.sabores.find(s => s.id === p.saborId) || {}).cor || '#ccc', 28)}</span>
+              <span><strong>${esc(p.cliente)}</strong><br><small class="suave">${p.quantidade} × ${esc(nomeDoSabor(p.saborId))}</small></span>
+              <span class="${p.data < hojeISO() ? 'negativo' : ''}">${p.data === hojeISO() ? 'Hoje' : dataBR(p.data)}</span>
+            </li>`).join('')}
+        </ul>` : '<p class="vazio">Nenhuma entrega pendente.</p>'}
+      </section>
+
+      <section class="cartao">
+        <h2>Vendas por sabor no mês</h2>
+        <div class="barras" role="list">
+          ${porSabor.map(x => `
+            <div class="barra-linha" role="listitem">
+              <span>${esc(x.s.nome)}</span>
+              <div class="barra-trilho"><div class="barra-valor" style="width:${(x.unidades / maior) * 100}%;background:${x.s.cor}"></div></div>
+              <strong>${x.unidades}</strong>
+            </div>`).join('')}
+        </div>
+        <div class="pedido-acoes">
+          <a class="btn btn-secundario btn-pequeno" href="#painel-producao">Lista de compras</a>
+          <a class="btn btn-secundario btn-pequeno" href="#painel-financeiro">Ver DRE</a>
+        </div>
+      </section>
+    </div>
+  </div>`;
+
+  const botaoDemo = el.querySelector('#inicio-demo');
+  if (botaoDemo) botaoDemo.addEventListener('click', () => {
+    carregarDadosDemo();
+    avisar('Dados de demonstração carregados.');
+    navegar();
+  });
+}
+
+/* ---------- Mais (celular) ---------- */
+
+function renderMais(el) {
+  el.innerHTML = `
+  <div class="tela">
+    <div class="grade-modulos">
+      ${MODULOS.map(m => `<a class="modulo" href="#painel-${m.id}">${icone(m.id)}<span>${m.titulo}</span></a>`).join('')}
+      <a class="modulo" href="#cardapio">${icone('producao')}<span>Ver cardápio do cliente</span></a>
+      <a class="modulo" href="#inicio-sistema">${icone('mais')}<span>Tela inicial</span></a>
+    </div>
+  </div>`;
+}
+
+/* ---------- Configurações ---------- */
+
+function renderConfiguracoes(el) {
+  const cfg = lerConfig();
+  el.innerHTML = `
+  <div class="tela">
+    <section class="cartao">
+      <h2>Dados do negócio</h2>
+      <form id="form-config" class="form-grade" novalidate>
+        <label>Nome do negócio <input name="nomeNegocio" value="${esc(cfg.nomeNegocio)}" required></label>
+        <label>Seu WhatsApp (recebe listas e DRE) <input name="whatsapp" type="tel" value="${esc(cfg.whatsapp)}" placeholder="(66) 99999-9999"></label>
+        <label>Estrelas para ganhar brinde <input name="estrelasParaBrinde" type="number" min="1" step="1" value="${cfg.estrelasParaBrinde}"></label>
+        <label>Brinde <input name="brinde" value="${esc(cfg.brinde)}"></label>
+        <button class="btn btn-primario largura-total" type="submit">Salvar</button>
+      </form>
+    </section>
+    <section class="cartao">
+      <h2>Instalar como aplicativo</h2>
+      <p class="suave">No Chrome do celular, abra o menu (três pontos) e toque em "Adicionar à tela inicial". O painel abre em tela cheia, com ícone próprio.</p>
+      <p class="suave">O número de WhatsApp que recebe os pedidos do cardápio fica no arquivo data/catalogo.json.</p>
+    </section>
+  </div>`;
+
+  el.querySelector('#form-config').addEventListener('submit', evento => {
+    evento.preventDefault();
+    const dados = Object.fromEntries(new FormData(evento.target));
+    const atual = lerConfig();
+    salvarConfig({
+      ...atual,
+      nomeNegocio: dados.nomeNegocio.trim() || CONFIG_PADRAO.nomeNegocio,
+      whatsapp: soDigitos(dados.whatsapp),
+      estrelasParaBrinde: Math.max(1, Math.floor(Number(dados.estrelasParaBrinde)) || 5),
+      brinde: dados.brinde.trim() || CONFIG_PADRAO.brinde
+    });
+    avisar('Configurações salvas.');
+    navegar();
+  });
+}
+
+/* ---------- Inicialização (chamada pelo app.js) ---------- */
+
+async function iniciarPainel() {
+  montarMenus();
+  try {
+    CATALOGO = await buscarCatalogo();
+    // Na primeira vez, a regra de fidelidade vem do catálogo
+    if (!ler(CHAVES.config, null)) {
+      salvarConfig({
+        ...CONFIG_PADRAO,
+        nomeNegocio: CATALOGO.produtora.nome,
+        estrelasParaBrinde: CATALOGO.fidelidade.estrelasParaBrinde,
+        brinde: CATALOGO.fidelidade.brinde
+      });
+    }
+  } catch (erro) {
+    document.querySelector('#conteudo').innerHTML =
+      `<p class="vazio">${esc(erro.message)} Abra o projeto com a extensão Live Server do VS Code ou publique no GitHub Pages.</p>`;
+  }
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  }
+}
+
+
+</script>
+  <script>
+/* ==========================================================
+   vitrine.js - cardápio do cliente e pedido pelo WhatsApp
+   ========================================================== */
+
+const carrinho = {};
+let CARDAPIO = null;
+
+async function iniciarVitrine() {
+  const lista = document.querySelector('#catalogo');
+  try {
+    CARDAPIO = await buscarCatalogo();
+    preencherCabecalho();
+    mostrarSabores();
+    atualizarResumo();
+  } catch (erro) {
+    lista.innerHTML = `<p class="vazio">${esc(erro.message)} Abra o projeto com a extensão Live Server do VS Code ou publique no GitHub Pages.</p>`;
+  }
+
+  const campoData = document.querySelector('#data');
+  campoData.min = hojeISO();
+  try { document.querySelector('#nome').value = localStorage.getItem('gf-nome-cliente') || ''; } catch (e) { /* ignora */ }
+
+  document.querySelector('#btn-pedir').addEventListener('click', enviarPedido);
+  lista.addEventListener('click', alterarQuantidade);
+
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  }
+}
+
+function preencherCabecalho() {
+  const { produtora, fidelidade, precosDeExemplo } = CARDAPIO;
+  document.querySelectorAll('[data-nome-negocio]').forEach(el => { el.textContent = produtora.nome; });
+  document.querySelector('#slogan').textContent = `${produtora.slogan} · ${produtora.cidade}`;
+  document.querySelector('#regra-fidelidade').textContent =
+    `Cada geladinho vale 1 estrela. Juntou ${fidelidade.estrelasParaBrinde}, ganhou ${fidelidade.brinde}. A produtora envia seu cartão pelo WhatsApp a cada entrega.`;
+  document.querySelector('#aviso-exemplo').hidden = !precosDeExemplo;
+}
+
+function precoTexto(sabor) {
+  return sabor.preco != null ? moeda(sabor.preco) : 'Consultar valor';
+}
+
+function mostrarSabores() {
+  const lista = document.querySelector('#catalogo');
+  lista.innerHTML = CARDAPIO.sabores.map(sabor => `
+    <article class="card-sabor" style="--cor-sabor:${sabor.cor}">
+      <div class="card-sabor-imagem">${svgGeladinho(sabor.cor, 96)}</div>
+      <div class="card-sabor-corpo">
+        <h3>${esc(sabor.nome)}</h3>
+        <p class="suave">${esc(sabor.descricao)}</p>
+        <div class="card-sabor-rodape">
+          <strong class="preco">${precoTexto(sabor)}</strong>
+          <div class="stepper" role="group" aria-label="Quantidade de ${esc(sabor.nome)}">
+            <button type="button" data-acao="menos" data-id="${sabor.id}" aria-label="Tirar um ${esc(sabor.nome)}">−</button>
+            <output id="qtd-${sabor.id}" aria-live="polite">0</output>
+            <button type="button" data-acao="mais" data-id="${sabor.id}" aria-label="Adicionar um ${esc(sabor.nome)}">+</button>
+          </div>
+        </div>
+      </div>
+    </article>`).join('');
+}
+
+function alterarQuantidade(evento) {
+  const botao = evento.target.closest('button[data-acao]');
+  if (!botao) return;
+  const id = botao.dataset.id;
+  const atual = carrinho[id] || 0;
+  carrinho[id] = botao.dataset.acao === 'mais' ? Math.min(99, atual + 1) : Math.max(0, atual - 1);
+  document.querySelector(`#qtd-${id}`).textContent = carrinho[id];
+  botao.closest('.card-sabor').classList.toggle('selecionado', carrinho[id] > 0);
+  atualizarResumo();
+}
+
+function itensDoCarrinho() {
+  return CARDAPIO.sabores
+    .filter(s => carrinho[s.id] > 0)
+    .map(s => ({ sabor: s, qtd: carrinho[s.id], subtotal: s.preco != null ? s.preco * carrinho[s.id] : null }));
+}
+
+function atualizarResumo() {
+  const itens = itensDoCarrinho();
+  const unidades = itens.reduce((s, i) => s + i.qtd, 0);
+  const temValorACombinar = itens.some(i => i.subtotal == null);
+  const total = itens.reduce((s, i) => s + (i.subtotal || 0), 0);
+
+  document.querySelector('#qtd-total').textContent = `${unidades} geladinho${unidades === 1 ? '' : 's'}`;
+  document.querySelector('#valor-total').textContent = temValorACombinar ? `${moeda(total)} + a combinar` : moeda(total);
+  document.querySelector('#btn-pedir').disabled = unidades === 0;
+  document.querySelector('#barra').classList.toggle('ativa', unidades > 0);
+  document.querySelector('#resumo').innerHTML = itens.length
+    ? `<ul class="lista-simples">${itens.map(i => `<li><span>${i.qtd} × ${esc(i.sabor.nome)}</span><span>${i.subtotal != null ? moeda(i.subtotal) : 'a combinar'}</span></li>`).join('')}</ul>`
+    : '<p class="suave">Escolha os sabores no cardápio acima.</p>';
+}
+
+function enviarPedido() {
+  const aviso = document.querySelector('#aviso');
+  const nome = document.querySelector('#nome').value.trim();
+  const recebimento = document.querySelector('#entrega').value;
+  const data = document.querySelector('#data').value;
+  const obs = document.querySelector('#obs').value.trim();
+  const itens = itensDoCarrinho();
+
+  if (itens.length === 0) {
+    aviso.textContent = 'Escolha pelo menos um sabor.';
+    return;
+  }
+  if (!nome) {
+    aviso.textContent = 'Informe seu nome para a produtora saber de quem é o pedido.';
+    document.querySelector('#seu-pedido').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('#nome').focus();
+    return;
+  }
+  if (data && data < hojeISO()) {
+    aviso.textContent = 'Escolha uma data a partir de hoje.';
+    return;
+  }
+  aviso.textContent = '';
+  try { localStorage.setItem('gf-nome-cliente', nome); } catch (e) { /* ignora */ }
+
+  const unidades = itens.reduce((s, i) => s + i.qtd, 0);
+  const total = itens.reduce((s, i) => s + (i.subtotal || 0), 0);
+  const linhas = itens.map(i => `• ${i.qtd} × ${i.sabor.nome}${i.subtotal != null ? ` (${moeda(i.subtotal)})` : ''}`).join('\n');
+  const texto =
+    `Olá! Quero fazer um pedido no ${CARDAPIO.produtora.nome}:\n\n${linhas}\n\n` +
+    `Total: ${moeda(total)} (${unidades} geladinho${unidades === 1 ? '' : 's'})\n` +
+    `Nome: ${nome}\nRecebimento: ${recebimento}` +
+    (data ? `\nPara: ${dataBR(data)}` : '') +
+    (obs ? `\nObservação: ${obs}` : '');
+
+  abrirWhatsApp(CARDAPIO.produtora.whatsapp, texto);
+}
+
+iniciarVitrine();
+
+</script>
+  <script>
+/* ==========================================================
+   app.js - junta tela inicial, cardápio e painel em um único HTML
+   sem endereço ou #inicio-sistema  -> tela inicial com os módulos
+   #painel e #painel-<módulo>        -> painel da produtora
+   qualquer outro (#cardapio...)     -> cardápio do cliente
+   ========================================================== */
+
+const DESCRICAO_MODULOS = {
+  inicio: 'Resumo do dia e do mês',
+  pedidos: 'Registrar, acompanhar e avisar pelo WhatsApp',
+  fidelidade: 'Cartão de estrelas e brindes',
+  producao: 'Receitas da semana e lista de compras',
+  precificacao: 'Custo de cada sabor e preço sugerido',
+  financeiro: 'Despesas e DRE do mês',
+  relatorios: 'Planilhas para o Power BI e backup',
+  configuracoes: 'WhatsApp, regra do brinde e dados do negócio'
+};
+
+function areaAtual() {
+  const hash = location.hash.slice(1);
+  if (hash === '' || hash === 'inicio-sistema') return 'inicio';
+  if (hash === 'painel' || hash.startsWith('painel-')) return 'painel';
+  return 'vitrine';
+}
+
+function montarAtalhos() {
+  document.querySelector('#atalhos-modulos').innerHTML = MODULOS.map(m => `
+    <a class="modulo" href="#painel-${m.id}">
+      ${icone(m.id)}
+      <span>${m.titulo}</span>
+      <small>${DESCRICAO_MODULOS[m.id] || ''}</small>
+    </a>`).join('');
+}
+
+function rotear() {
+  const area = areaAtual();
+  document.querySelector('#modo-inicio').hidden = area !== 'inicio';
+  document.querySelector('#modo-vitrine').hidden = area !== 'vitrine';
+  document.querySelector('#modo-painel').hidden = area !== 'painel';
+  document.body.className = { inicio: 'tela-inicial', vitrine: 'vitrine', painel: 'painel' }[area];
+
+  if (area === 'painel') {
+    if (CATALOGO) navegar();
+  } else {
+    document.title = area === 'inicio' ? 'Geladinho Fácil' : 'Geladinho Fácil | Cardápio';
+    if (location.hash !== '#seu-pedido' && location.hash !== '#catalogo') window.scrollTo(0, 0);
+  }
+}
+
+window.addEventListener('hashchange', rotear);
+montarAtalhos();
+rotear();
+iniciarPainel().then(rotear);
+
+</script>
+</body>
+</html>
